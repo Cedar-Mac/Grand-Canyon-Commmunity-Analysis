@@ -1,0 +1,169 @@
+---
+title: "JAMP Metabarcoding Pipeline"
+output:
+  pdf_document: default
+  html_notebook: default
+editor_options:
+  chunk_output_type: console
+---
+
+## Clear workspace and load JAMP
+
+```{r include=FALSE}
+# Load packages
+packages <- c('JAMP', 'here')
+lapply(packages, library, character.only = T)
+
+```
+
+## Check all data made it
+```{r}
+# Make sure that all reads are paired, sudo check that no files were left behind
+first_reads <- list.files(here("input_files", "_data"), pattern = ".*R1.fastq", full.names = TRUE)
+second_reads <- list.files(here("input_files", "_data"), pattern = ".*R2.fastq", full.names = TRUE)
+unmerged_file_names <- data.frame(first_reads, second_reads) 
+unmerged_file_names$first_reads <- substr(unmerged_file_names$first_reads, 1, nchar(unmerged_file_names$first_reads)-9)
+unmerged_file_names$second_reads <- substr(unmerged_file_names$second_reads, 1, nchar(unmerged_file_names$second_reads)-9)
+unmerged_file_names$ERROR <- ifelse(unmerged_file_names$first_reads != unmerged_file_names$second_reads, "ERROR", "fine")
+```
+
+## Merge pair end reads
+
+```{r}
+# vsearch cannot auto pair R1 and R2? So used lapply to iterate over unmerged_file_names df.
+lapply(unmerged_file_names, Merge_PE(file1=first_reads, file2=second_reads, exe= "vsearch"))
+if (length(list.files(here("A_merge_PE", "_data"))) == 95) {
+  print("Success!")
+}
+
+# Two empty samples (CR_216_1_S45, CR_97_1_S29), and BA_1_S92 didn't merge successfully
+```
+
+
+## Trim primers
+fwhF2 and EPTDr2n
+
+EPTDr2n ended with a Y degenerate base, which IDT was unable to produce. Instead, two primers were created, one ending with C (EPTDr2n_C) and the other ending with T (EPTDr2n_T).
+
+All primers are sets of 4 primers with 0-3 N bases to create frame shifts.
+
+```{r include=FALSE}
+
+# import primer sequences (just COI primer sequence, not including universal tail)
+
+primers <- read.csv(here("input_files", "fwhF2_EPTDr2n_primer_sequences.csv"))
+
+#identify name of forward and reverse primer
+f.primer <- "fwhF2_"
+r.primer <- "EPTDr2n_"
+
+#return TRUE or FALSE if each primer is Forward or Reverse
+is_f <- grepl(f.primer, primers$Name)
+is_r <- grepl(r.primer, primers$Name)
+
+#create character string with forward and reverse primers
+fwhF2 <- primers$Sequence[primers$Name=="fwhF2"]
+EPTDr2n <- primers$Sequence[primers$Name=="EPTDr2n"]
+
+primer_sequences <- cbind(fwhF2,EPTDr2n)
+
+# trim primers 
+merged_files <- list.files(here("A_merge_PE", "_data"), full.names = TRUE)
+
+Cutadapt(files = merged_files, 
+         forward = fwhF2,
+         reverse = EPTDr2n,
+         bothsides=T)
+
+#by using "bothsides=T", forward or reverse primers are detected on both ends. This is not nessesary for fusion primers.
+
+```
+
+
+## get length distribution of trimmed sequences
+
+```{r include=FALSE}
+
+dir.create("_Length_distribution", path = "B_Cutadapt/_stats/_Length_distribution")
+
+trimmed_files <- list.files(here("B_Cutadapt", "_data"), full.names = TRUE) # Create list of trimmed filenames
+
+start_time <- Sys.time() # start timer to see how long the following for loop will take
+
+# Loop over all trimmed files. Create length distribution pdf with name of the sample (cutoff file path and suffix)
+for (file in trimmed_files) {
+  Length_distribution(sequFile = file, out = paste("B_Cutadapt/_stats/_Length_distribution/", 
+                                                    substr(file, nchar("/Users/cedarmackaness/gc/B_Cutadapt/_data/ "), 
+                                                    nchar(file) - nchar("_PE_cut.fastq")), ".pdf", sep=""), fastq=TRUE)
+}
+
+end_time <- Sys.time() # end timer once for loop is completed
+
+end_time - start_time
+
+
+
+```
+
+
+## Discard non-target length reads (+/- 10bp)
+The fwhF2/EPDr2n COI fragment is 142bp
+
+```{r include=FALSE}
+
+#Filter trimmed reads to only read within +/- 10bp of expected fragment length
+Cutadapt_files <- list.files("B_Cutadapt/_data", full.names = TRUE)
+Minmax(files = Cutadapt_files,
+       min=(142-10),
+       max=(142+10))
+
+```
+
+## Discard reads with an Expected Error greater than 1
+
+```{r include=FALSE}
+
+# Filter files by maximum expected error
+Minmax_files <- list.files("C_Minmax/_data", full.names = TRUE)
+Max_ee(files = Minmax_files,
+       max_ee=1)
+#Output in D_U_max_ee 
+
+Max_ee(files = Minmax_files,
+       max_ee=0.5)
+#Output in E_U_max_ee
+
+```
+
+## Default OTUs
+Cluster sequences into OTUs using VSearch.
+This OTU clustering is not subset to the lowest sequencing depth, something that is available with USearch but not with VSearch. At the moment I am going to cluster without subsetting, but plan to figure out how to subset in the future (11/19/21).
+
+
+```{r include=FALSE}
+
+# Take files from E_U_max_ee, which were filtered at an EE of 1
+Max_ee_files <- list.files("E_U_max_ee/_data", full.names=T)
+Max_ee_subset <- Max_ee_files[1:10]
+
+#cluster OTUs based on Max_ee files with a filter of 0.01%. This means that any sequence greater than 0.01% abundance in the total dataset will be included as an OTU
+Cluster_otus(files= Max_ee_files,
+             filter=0.01,
+             otu_radius_pct=3)
+
+#create new OTU heatmap with better color grading
+OTU_heatmap(file = "F_Cluster_otus/5_OTU_table_0.01.csv",
+            out = "GC_VR_OTU_Heatmap_0.01.pdf",
+            abundance = TRUE,
+            col = c("blue3", "white"))
+
+```
+
+## Test multiple otu_radius_pct's
+```{r}
+#otu_radius_pct will change how strict the clustering is (higher percent means more disimilar sequences will be clustered under the same otu.)
+Cluster_otus(files= Max_ee_files,
+             filter=0.01,
+             otu_radius_pct=3)
+```
+
