@@ -7,13 +7,13 @@
 VSEARCH=$(which vsearch)
 THREADS=4
 INPUT_FILE=/Users/cedarmackaness/gc/F_Cluster_otus/_data/2_OTU_clustering/C_all_derep_min2_OTUs+chimeras.fasta
-ID=$1
+ALPHA=$1
 
 
 function cluster_wrapper {
-    $VSEARCH --cluster_size $INPUT_FILE \
+    $VSEARCH --cluster_unoise $INPUT_FILE \
     --threads $THREADS \
-    --id $ID \
+    --ALPHA $ALPHA \
     --strand plus \
     --sizein \
     --sizeout \
@@ -24,4 +24,4 @@ function cluster_wrapper {
     --otutabout id_${ID}_min2_OTUs_no_chimeras.otutab.txt
 }
 
-cluster_wrapper $ID
+cluster_wrapper $ALPHA

@@ -11,8 +11,9 @@ editor_options:
 
 ```{r include=FALSE}
 # Load packages
-packages <- c('JAMP', 'here')
+packages <- c('JAMP', 'here', 'tidyverse')
 lapply(packages, library, character.only = T)
+source("code/JAMP_folder_rename.R")
 
 ```
 
@@ -38,7 +39,6 @@ if (length(list.files(here("A_merge_PE", "_data"))) == 95) {
 
 # Two empty samples (CR_216_1_S45, CR_97_1_S29), and BA_1_S92 didn't merge successfully
 ```
-
 
 ## Trim primers
 fwhF2 and EPTDr2n
@@ -101,39 +101,74 @@ end_time <- Sys.time() # end timer once for loop is completed
 
 end_time - start_time
 
-
-
 ```
 
 
-## Discard non-target length reads (+/- 10bp)
-The fwhF2/EPDr2n COI fragment is 142bp
-
-```{r include=FALSE}
-
-#Filter trimmed reads to only read within +/- 10bp of expected fragment length
+## Discard all sequences that are not an exact match for sequence length (142bp)
+```{r}
+#Filter trimmed reads to only match 142 bp
 Cutadapt_files <- list.files("B_Cutadapt/_data", full.names = TRUE)
 Minmax(files = Cutadapt_files,
-       min=(142-10),
-       max=(142+10))
-
+       min=(142),
+       max=(142))
+JAMP_folder_rename(newname="minmax_haplotypes")
 ```
 
-## Discard reads with an Expected Error greater than 1
 
-```{r include=FALSE}
+## Create two folders, one for ee value of 0.5 and one for ee value of 1.0
+```{r}
+haplotype_minmax_files <- list.files(here(recent_newname, "_data"), full.names = TRUE)
 
-# Filter files by maximum expected error
-Minmax_files <- list.files("C_Minmax/_data", full.names = TRUE)
-Max_ee(files = Minmax_files,
-       max_ee=1)
-#Output in D_U_max_ee 
-
-Max_ee(files = Minmax_files,
+Max_ee(files = haplotype_minmax_files,
        max_ee=0.5)
-#Output in E_U_max_ee
+JAMP_folder_rename(newname="maxee_haplotypes_maxee0_5")
 
+Max_ee(files = haplotype_minmax_files,
+       max_ee=1.0)
+JAMP_folder_rename(newname="maxee_haplotypes_maxee1_0")
 ```
+
+
+## Denoise and cluster with different alpha values
+```{r}
+files_for_denoise_maxee0_5 <- list.files(here("maxee_haplotypes_maxee0_5_2023-07-03", "_data"), full.names = TRUE)
+for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
+  Denoise(files = files_for_denoise_maxee0_5,
+        minsize = 10,
+        minrelsize = 0.001,
+        unoise_alpha = i)
+  JAMP_folder_rename(newname=paste("denoised_haplotypes_maxee0_5", "_alpha_", i, sep=""))
+}
+
+files_for_denoise_maxee1_0 <- list.files(here("maxee_haplotypes_maxee1_0_2023-07-03", "_data"), full.names = TRUE)
+for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
+  Denoise(files = files_for_denoise_maxee1_0,
+        minsize = 10,
+        minrelsize = 0.001,
+        unoise_alpha = i)
+  JAMP_folder_rename(newname=paste("denoised_haplotypes_maxee1_0", "_alpha_", i, sep=""))
+}
+```
+
+
+## Test multiple otu_radius_pct's
+```{r}
+#otu_radius_pct will change how strict the clustering is (higher percent means more disimilar sequences will be clustered under the same otu.)
+Cluster_otus(files= Max_ee_files,
+             filter=0.01,
+             otu_radius_pct = 3)
+
+Cluster_otus(files= Max_ee_files,
+             filter=0.01,
+             otu_radius_pct = 10)
+
+Cluster_otus(files= Max_ee_files,
+             filter=0.01,
+             otu_radius_pct = 30)
+```
+
+
+
 
 ## Default OTUs
 Cluster sequences into OTUs using VSearch.
@@ -142,8 +177,8 @@ This OTU clustering is not subset to the lowest sequencing depth, something that
 
 ```{r include=FALSE}
 
-# Take files from E_U_max_ee, which were filtered at an EE of 1
-Max_ee_files <- list.files("E_U_max_ee/_data", full.names=T)
+# Take files from D_U_max_ee, which were filtered at an EE of 1
+Max_ee_files <- list.files("D_U_max_ee/_data", full.names=T)
 Max_ee_subset <- Max_ee_files[1:10]
 
 #cluster OTUs based on Max_ee files with a filter of 0.01%. This means that any sequence greater than 0.01% abundance in the total dataset will be included as an OTU
@@ -158,12 +193,3 @@ OTU_heatmap(file = "F_Cluster_otus/5_OTU_table_0.01.csv",
             col = c("blue3", "white"))
 
 ```
-
-## Test multiple otu_radius_pct's
-```{r}
-#otu_radius_pct will change how strict the clustering is (higher percent means more disimilar sequences will be clustered under the same otu.)
-Cluster_otus(files= Max_ee_files,
-             filter=0.01,
-             otu_radius_pct=3)
-```
-
