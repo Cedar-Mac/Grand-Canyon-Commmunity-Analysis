@@ -7,17 +7,17 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Clear workspace and load JAMP
-
+## Load packages and folder_rename function
 ```{r include=FALSE}
 # Load packages
-packages <- c('JAMP', 'here', 'tidyverse')
+packages <- c('JAMP', 'here', 'tidyverse', 'vegan')
 lapply(packages, library, character.only = T)
 source("code/JAMP_folder_rename.R")
 
 ```
 
 ## Check all data made it
+This is a very simple check to make sure that all reads have an R1 and R2 fastq file. If there is a missing file or the names do not match the ERROR column will read "ERROR" otherwise it says "fine". 
 ```{r}
 # Make sure that all reads are paired, sudo check that no files were left behind
 first_reads <- list.files(here("input_files", "_data"), pattern = ".*R1.fastq", full.names = TRUE)
@@ -29,7 +29,6 @@ unmerged_file_names$ERROR <- ifelse(unmerged_file_names$first_reads != unmerged_
 ```
 
 ## Merge pair end reads
-
 ```{r}
 # vsearch cannot auto pair R1 and R2? So used lapply to iterate over unmerged_file_names df.
 lapply(unmerged_file_names, Merge_PE(file1=first_reads, file2=second_reads, exe= "vsearch"))
@@ -46,7 +45,6 @@ fwhF2 and EPTDr2n
 EPTDr2n ended with a Y degenerate base, which IDT was unable to produce. Instead, two primers were created, one ending with C (EPTDr2n_C) and the other ending with T (EPTDr2n_T).
 
 All primers are sets of 4 primers with 0-3 N bases to create frame shifts.
-
 ```{r include=FALSE}
 
 # import primer sequences (just COI primer sequence, not including universal tail)
@@ -81,7 +79,6 @@ Cutadapt(files = merged_files,
 
 
 ## get length distribution of trimmed sequences
-
 ```{r include=FALSE}
 
 dir.create("_Length_distribution", path = "B_Cutadapt/_stats/_Length_distribution")
@@ -129,9 +126,10 @@ JAMP_folder_rename(newname="maxee_haplotypes_maxee1_0")
 ```
 
 
-## Denoise and cluster with different alpha values
+## Denoise with different alpha values and cluster
+3 files seem to get duplicated with the duplicates being all zero's. The three files are BA_2_S61_PE.1, CR_226_1_S47_PE.1, and DIA_2_S88_PE.1.
 ```{r}
-files_for_denoise_maxee0_5 <- list.files(here("maxee_haplotypes_maxee0_5_2023-07-03", "_data"), full.names = TRUE)
+files_for_denoise_maxee0_5 <- list.files(here("maxee_haplotypes_maxee0_5_2023-07-04", "_data"), full.names = TRUE)
 for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
   Denoise(files = files_for_denoise_maxee0_5,
         minsize = 10,
@@ -140,7 +138,7 @@ for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
   JAMP_folder_rename(newname=paste("denoised_haplotypes_maxee0_5", "_alpha_", i, sep=""))
 }
 
-files_for_denoise_maxee1_0 <- list.files(here("maxee_haplotypes_maxee1_0_2023-07-03", "_data"), full.names = TRUE)
+files_for_denoise_maxee1_0 <- list.files(here("maxee_haplotypes_maxee1_0_2023-07-04", "_data"), full.names = TRUE)
 for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
   Denoise(files = files_for_denoise_maxee1_0,
         minsize = 10,
@@ -151,35 +149,55 @@ for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
 ```
 
 
-## Test multiple otu_radius_pct's
+## Create dissimilarity matricies for mantel tests
+For each ee filtering and alpha value denoising, calculate a dissimilarity matrix of sampling sites based on haplotype abundances.
+Using the Cao index to account for potentially high beta diversity, and the unknown relationships between sampling and read counts for aquatic sampling of eDNA. SHOULD PROBABLY USE BINOMIAL METHOD AND CONVERT TO PRESENCE/ABSCENCE?
 ```{r}
-#otu_radius_pct will change how strict the clustering is (higher percent means more disimilar sequences will be clustered under the same otu.)
-Cluster_otus(files= Max_ee_files,
-             filter=0.01,
-             otu_radius_pct = 3)
-
-Cluster_otus(files= Max_ee_files,
-             filter=0.01,
-             otu_radius_pct = 10)
-
-Cluster_otus(files= Max_ee_files,
-             filter=0.01,
-             otu_radius_pct = 30)
+for (folder in dir(pattern = "^denoised_haplotypes")) {
+  #read in haplotype data, dropping metadata columns and the duplicated sites (3 sites end up duplicated somewhere in the denoising pipeline of JAMP)
+  haplo_table <- paste0(folder, "/E_haplo_table.csv") %>% read_csv(col_names = TRUE, show_col_types = FALSE, 
+    col_select = -c("sort", "haplotype", "OTU", "sequences", "BA_2_S61_PE.1", "CR_226_1_S47_PE.1", "DIA_2_S88_PE.1")) 
+  
+  haplo_table <- haplo_table[1:nrow(haplo_table) - 1,] #remove last row (site totals)
+  
+  haplo_table <- t(haplo_table) #transpose the distance matrix so haplotypes are columns and sites are rows.
+  
+  vegdist(haplo_table, method = "cao", binary = FALSE) %>% #dissimilarity matrix using Cao index.
+    as.matrix() %>% as.data.frame() %>% 
+      #write to file named dist_matrix.csv in appropriate folder.
+      write_csv(file = paste0(folder, "/dist_matrix.csv"),col_names = FALSE) 
+}
 ```
 
 
+## Mantel tests
+Compare each dissimilarity matrix to the default settings of ee = 1.0 and unoise_alpha = 5
+```{r}
+default_dist_matrix <- read_csv("denoised_haplotypes_maxee1_0_alpha_5_2023-07-04/dist_matrix.csv", 
+                                col_names = FALSE, show_col_types = FALSE) 
+
+for (folder in dir(pattern = "^denoised_haplotypes")) {
+  dist_matrix <- paste0(folder, "/dist_matrix.csv") %>% read_csv(col_names = FALSE, show_col_types = FALSE) 
+  
+  cat(paste0("mantel test for: ", folder, "\n"), file = "mantel_test_results.txt", append = TRUE)
+  
+  mantel_result <- mantel(as.dist(default_dist_matrix), as.dist(dist_matrix), 
+                          method = "pearson", permutations = 999)
+  
+  #save results for each comparison to file
+  cat("mantel statistic (r-value): ", mantel_result$statistic, "\np-value: ", mantel_result$signif, "\n\n", 
+      file = "mantel_test_results.txt", append = TRUE) 
+}
+```
 
 
 ## Default OTUs
 Cluster sequences into OTUs using VSearch.
 This OTU clustering is not subset to the lowest sequencing depth, something that is available with USearch but not with VSearch. At the moment I am going to cluster without subsetting, but plan to figure out how to subset in the future (11/19/21).
-
-
 ```{r include=FALSE}
 
-# Take files from D_U_max_ee, which were filtered at an EE of 1
-Max_ee_files <- list.files("D_U_max_ee/_data", full.names=T)
-Max_ee_subset <- Max_ee_files[1:10]
+# Take files from maxee_haplotypes_maxee1_0_2023-07-04, which were filtered at an EE of 1
+Max_ee_files <- list.files("maxee_haplotypes_maxee1_0_2023-07-04/_data", full.names=T)
 
 #cluster OTUs based on Max_ee files with a filter of 0.01%. This means that any sequence greater than 0.01% abundance in the total dataset will be included as an OTU
 Cluster_otus(files= Max_ee_files,
