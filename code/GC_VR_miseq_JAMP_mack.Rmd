@@ -10,10 +10,9 @@ editor_options:
 ## Load packages and folder_rename function
 ```{r include=FALSE}
 # Load packages
-packages <- c('JAMP', 'here', 'tidyverse', 'vegan')
+packages <- c('JAMP', 'here', 'tidyverse', 'vegan', 'Biostrings')
 lapply(packages, library, character.only = T)
 source("code/JAMP_folder_rename.R")
-
 ```
 
 ## Check all data made it
@@ -125,9 +124,9 @@ JAMP_folder_rename(newname="maxee_haplotypes_maxee1_0")
 ```
 
 
-## Denoise with different alpha values and cluster
+## Denoise with different alpha values and different expected error cut-offs and cluster
 
-3 files seem to get duplicated with the duplicates being all zero's. The three files are BA_2_S61_PE.1, CR_226_1_S47_PE.1, and DIA_2_S88_PE.1.
+3 files seem to get duplicated with the duplicates being all zero's. The three files are BA_2_S61_PE.1, CR_226_1_S47_PE.1, and DIA_2_S88_PE.1. Issue resolved.
 ```{r}
 files_for_denoise_maxee0_5 <- list.files(here("maxee_haplotypes_maxee0_5_2023-07-05", "_data"), full.names = TRUE)
 for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
@@ -197,27 +196,99 @@ Compare how the number of observed OTU's change with each method.
 Use OTU centroid sequences to compare the number of ESV's associated with each sequence according to different denoising methods. 
 ```{r}
 haplo2OTU <- list.files(path = ".", pattern = ".*_haplo2OTU.csv", recursive = TRUE, full.names = TRUE) %>% grep("_data", ., value = TRUE)
-haplo_seqs <- data.frame(method=character(0), sequence=character(0), ESV_count=double(0))
+otu_seqs <- data.frame(method=character(0), sequences=character(0), ESV_count=double(0))
 
 for (file in haplo2OTU) {
   file_data <- read_csv(file, col_select = c("ESV_count", "sequences"), show_col_types = FALSE)
   file_data$method <- substr(file, 23, nchar(file)-44)
-  haplo_seqs <- bind_rows(haplo_seqs, file_data)
+  otu_seqs <- bind_rows(otu_seqs, file_data)
 }
 
 # number of OTU's based on each filtering method. 
 # As expected the strictest filtering has the fewest OTU's (but the difference is small ~30 OTU's)
-OTU_count_by_method <- aggregate(haplo_seqs$sequences, by = list(Method=haplo_seqs$method), FUN = NROW)
+OTU_count_by_method <- aggregate(otu_seqs$sequences, by = list(Method=otu_seqs$method), FUN = NROW)
+OTU_count_by_method$maxee <- parse_number(unlist(strsplit(OTU_count_by_method$Method, "alpha")))[seq(1, 32, 2)] #create new column with maxee
+OTU_count_by_method[OTU_count_by_method == 0] <- 0.5
+OTU_count_by_method$alpha <- parse_number(unlist(strsplit(OTU_count_by_method$Method, "alpha")))[seq(2, 32, 2)] #create new column with alpha
+# Plot results
+OTU_count_by_method %>% 
+  ggplot((aes(x=alpha, y=x, group=factor(maxee), color=factor(maxee)))) +
+    geom_line() +
+    scale_color_discrete() +
+    ggtitle("Number of OTU's based on denoising parameters") +
+    ylab("Number of OTU's")
 
 # number of ESV's based on each filtering method. Nearly 450 more OTU's in the least strict method vs. most strict.
-ESV_count_by_method <- aggregate(haplo_seqs$ESV_count, by = list(Method=haplo_seqs$method), FUN = sum)
+ESV_count_by_method <- aggregate(otu_seqs$ESV_count, by = list(Method=otu_seqs$method), FUN = sum)
+ESV_count_by_method$maxee <- parse_number(unlist(strsplit(ESV_count_by_method$Method, "alpha")))[seq(1, 32, 2)] #create new column with maxee
+ESV_count_by_method[ESV_count_by_method == 0] <- 0.5
+ESV_count_by_method$alpha <- parse_number(unlist(strsplit(ESV_count_by_method$Method, "alpha")))[seq(2, 32, 2)] #create new column with alpha
 
+# Plot results
+ESV_count_by_method %>% 
+  ggplot((aes(x=alpha, y=x, group=factor(maxee), color=factor(maxee)))) +
+    geom_line() +
+    scale_color_discrete() +
+    ggtitle("Number of ESV's based on denoising parameters") +
+    ylab("Number of ESV's")
+  
 # Compare number of ESV's per OTU centroid for each method. 
-# If the number differs from default settings of ee = 1.0 and alpha = 5 by more than three then add to data frame ESV_method_differences.
-
 # Each column is a method. Each row is a centroid sequence. each value is the number of ESV's associated with each centroid.
-sequence_ESVs_by_method <- spread(haplo_seqs, key = "method", value = "ESV_count")
+sequence_ESVs_by_method <- spread(otu_seqs, key = "method", value = "ESV_count")
 
+#These are centroid sequences where at least one method had a different number of ESV's than the rest.
 ESV_method_differences <- filter_at(sequence_ESVs_by_method, vars(starts_with("maxee")), any_vars(. != maxee0_5_alpha_1))
 ```
+
+
+## NMS of the number of ESV's per OTU in method space space. 
+```{r}
+sequence_ESVs_by_method[is.na(sequence_ESVs_by_method)] <- 0
+ESV_MDS_in <- t(sequence_ESVs_by_method)[-1,]
+mode(ESV_MDS_in) <- "numeric"
+
+ESV_MDS_out <- metaMDS(ESV_MDS_in, autotransform = FALSE,
+          distance = "bray",
+          k = 3,
+          maxit = 999, 
+          trymax = 500,
+          wascores = TRUE)
+stressplot(ESV_MDS_out)
+plot(ESV_MDS_out, "sites")
+orditorp(ESV_MDS_out, "sites")
+```
+
+
+## Compare mean entropy scores
+A few different ideas here:
+  1. Corrected entropy score a la Antich:
+      for each method calculate the mean entropy for each codon position in a sequence -> 
+      average across all sequences for that method ->
+      calculate final entropy score of the sequence by weighted average of the average mean entropy score.
+      formula -- sum(i=3) entropy(i) * 3 / (entropy(1) + entropy(2) + entropy(3))
+  2. First position entropy score:
+      For each method take the mean entropy for a single codon position (likely position 1) ->
+      average across all sequences for that method, use that as final entropy value for the method
+  3. Entropy ratio a la Weitmer:
+      For each method find the average of the mean entropy scores for position 2 and 3 across sequences ->
+      calculate the ratio of average mean entropy score of position 2 and 3.
+  4. Something complicated:
+      Something to do with the entropy scores of individual sequences. 
+      Maybe flag method if any individual sequence has an outrageous entropy score.
+      Maybe develop a filter for haplotype sequences based on the entropy score.
+```{r}
+haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
+for (file in haplo_seqs) {
+  haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
+  
+}
+entropy_score <- taxreturn::codon_entropy(haplo_seq_StringSet, genetic_code = "SGC4", codon_filter = TRUE, method = "ML")
+#method "ML" is the maximum likelyhood. Calculates Shannon Entropy (H) using frequencies of bases from the reference CO1 gene?
+#genetic code "SGC4" is the invertebrate mitochondrial reference genome
+```
+
+Some sequences are being removed because they contain stop codons. These are clearly not true haplotypes.
+
+
 
