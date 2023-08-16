@@ -17,22 +17,31 @@ source("code/JAMP_folder_rename.R")
 
 ## Check all data made it
 This is a very simple check to make sure that all reads have an R1 and R2 fastq file. If there is a missing file or the names do not match the ERROR column will read "ERROR" otherwise it says "fine". 
+First and second reads are the forward and reverse reads.
+The ERROR column in the unmerged_file_names will say ERROR if names do not match or there is an unequal number of R1 and R2 reads. Could always count the number of ERROR occurances, but a quick visual scan is all I did.
+
 ```{r}
 # Make sure that all reads are paired, sudo check that no files were left behind
 first_reads <- list.files(here("input_files", "_data"), pattern = ".*R1.fastq", full.names = TRUE)
 second_reads <- list.files(here("input_files", "_data"), pattern = ".*R2.fastq", full.names = TRUE)
 unmerged_file_names <- data.frame(first_reads, second_reads) 
+
+# Remove the _R1.fastq suffix and _R2.fastq suffix to compare names and verify that all rows have matching names
 unmerged_file_names$first_reads <- substr(unmerged_file_names$first_reads, 1, nchar(unmerged_file_names$first_reads)-9)
 unmerged_file_names$second_reads <- substr(unmerged_file_names$second_reads, 1, nchar(unmerged_file_names$second_reads)-9)
 unmerged_file_names$ERROR <- ifelse(unmerged_file_names$first_reads != unmerged_file_names$second_reads, "ERROR", "fine")
 ```
 
 ## Merge pair end reads
+Merging the paired reads takes the forward and reverse strands and their quality scores and essentially cross-checks them to create a single single corrected strand with filled N's and new quality scores. Merge_PE from the JAMP pipeline is the function to do this. Loop apply the function over all fastq files.
+
 Two empty samples (CR_216_1_S45, CR_97_1_S29), and BA_1_S92 didn't merge successfully. 
 BA_1_S92 was missing a sequence at line 22 of the R2 file. I completely removed this sequence from both files.
 ```{r}
 # vsearch cannot auto pair R1 and R2? So used lapply to iterate over unmerged_file_names df.
 lapply(unmerged_file_names, Merge_PE(file1=first_reads, file2=second_reads, exe= "vsearch"))
+
+# Make sure all reads merged successfully (there should be 95 resulting files).
 if (length(list.files(here("A_merge_PE", "_data"))) == 95) {
   print("Success!")
 }
@@ -45,25 +54,25 @@ EPTDr2n ended with a Y degenerate base, which IDT was unable to produce. Instead
 
 All primers are sets of 4 primers with 0-3 N bases to create frame shifts.
 ```{r include=FALSE}
-# import primer sequences (just COI primer sequence, not including universal tail)
+# Import primer sequences (just COI primer sequence, not including universal tail)
 
 primers <- read.csv(here("input_files", "fwhF2_EPTDr2n_primer_sequences.csv"))
 
-#identify name of forward and reverse primer
+# Identify name of forward and reverse primer
 f.primer <- "fwhF2_"
 r.primer <- "EPTDr2n_"
 
-#return TRUE or FALSE if each primer is Forward or Reverse
+# Return TRUE or FALSE if each primer is Forward or Reverse
 is_f <- grepl(f.primer, primers$Name)
 is_r <- grepl(r.primer, primers$Name)
 
-#create character string with forward and reverse primers
+# Create character string with forward and reverse primers
 fwhF2 <- primers$Sequence[primers$Name=="fwhF2"]
 EPTDr2n <- primers$Sequence[primers$Name=="EPTDr2n"]
 
 primer_sequences <- cbind(fwhF2, EPTDr2n)
 
-# trim primers 
+# Trim primers 
 merged_files <- list.files(here("A_merge_PE", "_data"), full.names = TRUE)
 
 Cutadapt(files = merged_files, 
@@ -71,12 +80,14 @@ Cutadapt(files = merged_files,
          reverse = EPTDr2n,
          bothsides=T)
 
-#by using "bothsides=T", forward or reverse primers are detected on both ends. This is not nessesary for fusion primers.
+# By using "bothsides=T", forward or reverse primers are detected on both ends. This is not nessesary for fusion primers.
 
 ```
 
 
 ## get length distribution of trimmed sequences
+This is a good quality check. Target sequences should be 142 bp plus or minus a few bases for indels.
+
 ```{r include=FALSE}
 
 dir.create("_Length_distribution", path = "B_Cutadapt/_stats/_Length_distribution")
@@ -87,9 +98,10 @@ start_time <- Sys.time() # start timer to see how long the following for loop wi
 
 # Loop over all trimmed files. Create length distribution pdf with name of the sample (cutoff file path and suffix)
 for (file in trimmed_files) {
-  Length_distribution(sequFile = file, out = paste("B_Cutadapt/_stats/_Length_distribution/", 
-                                                    substr(file, nchar("/Users/cedarmackaness/gc/B_Cutadapt/_data/ "), 
-                                                    nchar(file) - nchar("_PE_cut.fastq")), ".pdf", sep=""), fastq=TRUE)
+  Length_distribution(sequFile = file, 
+                      out = paste("B_Cutadapt/_stats/_Length_distribution/", 
+                                  substr(file, start = nchar("/Users/cedarmackaness/gc/B_Cutadapt/_data/ "), 
+                                         nchar(file) - nchar("_PE_cut.fastq")), ".pdf", sep=""), fastq=TRUE)
 }
 
 end_time <- Sys.time() # end timer once for loop is completed
@@ -111,6 +123,7 @@ JAMP_folder_rename(newname="minmax_haplotypes")
 
 
 ## Create two folders, one for ee value of 0.5 and one for ee value of 1.0
+At this point we still have fastq files as the output of the Minmax filter. I now create two folders for filtered sequences based on their quality scores. One is filtered at an expected error rate of 0.5 errors per 100 bases, the other at 1 error per 100 bases. 
 ```{r}
 haplotype_minmax_files <- list.files(here(recent_newname, "_data"), full.names = TRUE)
 
@@ -125,8 +138,11 @@ JAMP_folder_rename(newname="maxee_haplotypes_maxee1_0")
 
 
 ## Denoise with different alpha values and different expected error cut-offs and cluster
+The alpha value determines at what point a similar sequence x is determined to be a mistaken version of sequence y. A lower alpha value means that the distance between sequences has to be large, otherwise sequence x will be considered the same as sequence y. A higher alpha value will be more relaxed and result in more "unique" sequences at the risk of identifying sequences as unique that were actually mistaken versions.
 
-3 files seem to get duplicated with the duplicates being all zero's. The three files are BA_2_S61_PE.1, CR_226_1_S47_PE.1, and DIA_2_S88_PE.1. Issue resolved.
+The JAMP Denoise function performs several tasks. First chimera sequences (CO1 genes that appear outside of invertebrate mitochondrial DNA?) are removed. Sequences are then denoised (supposedly erroneous sequences are merged with the correct sequence). and finally sequences are clustered into OTU's.
+
+3 files seem to get duplicated with the duplicates being all zero's. The three files are BA_2_S61_PE.1, CR_226_1_S47_PE.1, and DIA_2_S88_PE.1. Issue resolved, an extra row in the files was the issue.
 ```{r}
 files_for_denoise_maxee0_5 <- list.files(here("maxee_haplotypes_maxee0_5_2023-07-05", "_data"), full.names = TRUE)
 for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
@@ -239,9 +255,14 @@ sequence_ESVs_by_method <- spread(otu_seqs, key = "method", value = "ESV_count")
 #These are centroid sequences where at least one method had a different number of ESV's than the rest.
 ESV_method_differences <- filter_at(sequence_ESVs_by_method, vars(starts_with("maxee")), any_vars(. != maxee0_5_alpha_1))
 ```
+As expected the number of OTU's and the number of ESV's increases as the alpha value is relaxed. The line for ee=0.5 remains lower than the less strict filtering of ee=1.0. 
+The number of observed OTU's flattens out quickly as the alpha value increases becoming flat after an alpha of 4. 
+The number of ESV's increases until an alpha value of 8. 
+This suggests there may be some rare ESV's that are being discarded at lower alpha values, or that these ESV's are actually sequencing errors and were rightfully discarded. 
+Regardless, from a species conservation standpoint, it appears that an alpha value of 3 is perfectly acceptable, and relaxing the alpha value will not significantly increase the number of OTU's observed.
+When considering species haplotypes looking at phylogeny and population genetics it may be worth considering a more relaxed alpha value of 8. However, this has the risk of including erroneous sequences.
 
-
-## NMS of the number of ESV's per OTU in method space space. 
+## NMS of the number of ESV's per OTU in method space
 ```{r}
 sequence_ESVs_by_method[is.na(sequence_ESVs_by_method)] <- 0
 ESV_MDS_in <- t(sequence_ESVs_by_method)[-1,]
@@ -272,23 +293,101 @@ A few different ideas here:
   3. Entropy ratio a la Weitmer:
       For each method find the average of the mean entropy scores for position 2 and 3 across sequences ->
       calculate the ratio of average mean entropy score of position 2 and 3.
-  4. Something complicated:
+  4. Information content:
+      Information content takes the maximum possible entropy value and subtracts the observed entropy value.
+  5. Something complicated:
       Something to do with the entropy scores of individual sequences. 
       Maybe flag method if any individual sequence has an outrageous entropy score.
       Maybe develop a filter for haplotype sequences based on the entropy score.
 ```{r}
+# Going with option 3, entropy ratio.
 haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
+
+entropy_ratio_by_method <- data.frame(method=character(0), entropy_ratio=double(0))
+
 for (file in haplo_seqs) {
   haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
-  
+  entropy_scores <- taxreturn::codon_entropy(haplo_seq_StringSet, genetic_code = "SGC4", codon_filter = TRUE, method = "ML")
+    #method "ML" is the maximum likelihood. Calculates Shannon Entropy (H) using frequencies of bases.
+    #maximum entropy is 1.3863 nats (ln) for a completely random distribution of base frequency (expected for pos3).
+    #genetic code "SGC4" is the invertebrate mitochondrial reference genome.
+  pos1_mean_entropy <- lapply(1:length(entropy_scores), function(x) entropy_scores[[x]][[1]]) %>% unlist() %>% mean()
+  pos2_info <- log(4) - pos1_mean_entropy
+  pos2_mean_entropy <- lapply(1:length(entropy_scores), function(x) entropy_scores[[x]][[2]]) %>% unlist() %>% mean()
+  pos2_info <- log(4) - pos2_mean_entropy
+  pos3_mean_entropy <- lapply(1:length(entropy_scores), function(x) entropy_scores[[x]][[3]]) %>% unlist() %>% mean()
+  pos3_info <- log(4) - pos3_mean_entropy
+  entropy_ratio <- pos2_mean_entropy / pos3_mean_entropy
+  entropy_ratio_by_method <- add_row(entropy_ratio_by_method, method = substr(file, 23, nchar(file) - 52), entropy_ratio = entropy_ratio)
 }
-entropy_score <- taxreturn::codon_entropy(haplo_seq_StringSet, genetic_code = "SGC4", codon_filter = TRUE, method = "ML")
-#method "ML" is the maximum likelyhood. Calculates Shannon Entropy (H) using frequencies of bases from the reference CO1 gene?
-#genetic code "SGC4" is the invertebrate mitochondrial reference genome
+
+# Add column for maxee and alpha value
+entropy_ratio_by_method$maxee <- parse_number(unlist(strsplit(entropy_ratio_by_method$method, "alpha")))[seq(1, 32, 2)] 
+entropy_ratio_by_method$maxee[entropy_ratio_by_method$maxee == 0] <- 0.5
+entropy_ratio_by_method$alpha <- parse_number(unlist(strsplit(entropy_ratio_by_method$method, "alpha")))[seq(2, 32, 2)] 
+
+# Graph entropy ratio vs. alpha value for each ee.
+entropy_ratio_by_method %>% 
+  ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
+    geom_line() +
+    scale_color_discrete() +
+    ggtitle("Effect of Alpha Value on Codon Entropy Ratio") +
+    ylab("Entropy Ratio (P2/P3)")
 ```
 
-Some sequences are being removed because they contain stop codons. These are clearly not true haplotypes.
+71-72 sequences are being removed because they contain stop codons. These are clearly not true haplotypes.
+Additionally one sequence is always being reverse complimented, this is probably not supposed to be here after filtering and denoising. My guess is chimeral DNA that somehow got past the denoising process of JAMP.
+Current ratio is greater than 1 which would mean that position 3 has a lower entropy value/is more predictable. That goes against standard pattern of codon entropy. Potentially this is an issue with alignment and the codon_entropy function. Alternatively, since the entropy is empirical and based on observed counts in the sequences, it may be that the CO1 gene sequence being used is too short (142 bp). This could throw off base counts at each codon position. I believe the alignment issue could be very likely because the entropy value for position 1 would fit for position 3, and the entropy value of position 3 would fit with what we know about position 2 being highly conserved. I will test for this with multiple sequence alignment to a reference CO1 gene.
 
+## Verify entropy scores myself
+I ran a Blastx search on a random sequence. It appears a +2 shift in the reading frame is necessary to align with protein synthesis, therefore the first base in our sequences are actually the 3rd. I'm not sure if the taxreturn::codon_entropy function is taking that into account. If it is not taking the shift into account then the output is actually much closer to what is expected. We will verify here.
+```{r}
+haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
+
+my_entropy_ratios <- data.frame(method=character(0), entropy_ratio=double(0))
+
+for (file in haplo_seqs) {
+  # read in file
+  haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
+ 
+   # create probability table of each base at each position.
+  position_probability_matrix <- consensusMatrix(haplo_seq_StringSet, as.prob = TRUE, shift = 2)
+ 
+   # calculate entropy at each position using Shannon entropy formula with natural logarithm (to match the nats unit above)
+  position_entropy_vector <- apply(position_probability_matrix, 2, function(prob) -sum(prob * log(prob), na.rm = TRUE))
+ 
+   # reshape so there are three columns, one for each codon position. Fill the first two zero's as NA and rename columns.
+  codon_position_entropy_matrix <- matrix(position_entropy_vector, ncol = 3, byrow = TRUE)
+  codon_position_entropy_matrix[codon_position_entropy_matrix==0] <- NA
+  colnames(codon_position_entropy_matrix) <- c("pos_1", "pos_2", "pos_3")
+  
+  # calculate mean entropy of each codon position.
+  pos_1_mean <- colMeans(codon_position_entropy_matrix, na.rm = TRUE)[1]
+  pos_2_mean <- colMeans(codon_position_entropy_matrix, na.rm = TRUE)[2]
+  pos_3_mean <- colMeans(codon_position_entropy_matrix, na.rm = TRUE)[3]
+  
+  # ratio of most conserved position (position 2) and the most variable position (position 3)
+  ratio <- pos_2_mean / pos_3_mean
+  
+  # add the method results to the data frame and repeat.
+  my_entropy_ratios <- add_row(my_entropy_ratios, method = substr(file, 23, nchar(file) - 52), entropy_ratio = ratio)
+}
+
+# Add column for maxee and alpha value
+my_entropy_ratios$maxee <- parse_number(unlist(strsplit(my_entropy_ratios$method, "alpha")))[seq(1, 32, 2)] 
+my_entropy_ratios$maxee[my_entropy_ratios$maxee == 0] <- 0.5
+my_entropy_ratios$alpha <- parse_number(unlist(strsplit(my_entropy_ratios$method, "alpha")))[seq(2, 32, 2)] 
+
+# Graph entropy ratio vs. alpha value for each ee.
+my_entropy_ratios %>% 
+  ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
+    geom_line() +
+    scale_color_discrete() +
+    ggtitle("Effect of Alpha Value on Codon Entropy Ratio") +
+    ylab("Entropy Ratio (P2/P3)")
+
+```
 
 
