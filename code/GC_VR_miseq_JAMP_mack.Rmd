@@ -279,7 +279,6 @@ plot(ESV_MDS_out, "sites")
 orditorp(ESV_MDS_out, "sites")
 ```
 
-
 ## Compare mean entropy scores
 A few different ideas here:
   1. Corrected entropy score a la Antich:
@@ -306,6 +305,8 @@ haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recur
 
 entropy_ratio_by_method <- data.frame(method=character(0), entropy_ratio=double(0))
 
+start_time <- Sys.time()
+
 for (file in haplo_seqs) {
   haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
   entropy_scores <- taxreturn::codon_entropy(haplo_seq_StringSet, genetic_code = "SGC4", codon_filter = TRUE, method = "ML")
@@ -322,6 +323,10 @@ for (file in haplo_seqs) {
   entropy_ratio_by_method <- add_row(entropy_ratio_by_method, method = substr(file, 23, nchar(file) - 52), entropy_ratio = entropy_ratio)
 }
 
+end_time <- Sys.time() # end timer once for loop is completed
+
+end_time - start_time
+
 # Add column for maxee and alpha value
 entropy_ratio_by_method$maxee <- parse_number(unlist(strsplit(entropy_ratio_by_method$method, "alpha")))[seq(1, 32, 2)] 
 entropy_ratio_by_method$maxee[entropy_ratio_by_method$maxee == 0] <- 0.5
@@ -332,7 +337,7 @@ entropy_ratio_by_method %>%
   ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
     geom_line() +
     scale_color_discrete() +
-    ggtitle("Effect of Alpha Value on Codon Entropy Ratio") +
+    ggtitle("Codon Entropy Ratio from Taxreturn") +
     ylab("Entropy Ratio (P2/P3)")
 ```
 
@@ -353,7 +358,10 @@ for (file in haplo_seqs) {
   haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
  
    # create probability table of each base at each position.
-  position_probability_matrix <- consensusMatrix(haplo_seq_StringSet, as.prob = TRUE, shift = 2)
+  position_probability_matrix <- consensusMatrix(haplo_seq_StringSet, as.prob = TRUE, shift = 2, baseOnly = TRUE)
+  
+  # motif logo of the consensus matrix.
+  ggseqlogo::ggseqlogo(position_probability_matrix)
  
    # calculate entropy at each position using Shannon entropy formula with natural logarithm (to match the nats unit above)
   position_entropy_vector <- apply(position_probability_matrix, 2, function(prob) -sum(prob * log(prob), na.rm = TRUE))
@@ -385,9 +393,83 @@ my_entropy_ratios %>%
   ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
     geom_line() +
     scale_color_discrete() +
-    ggtitle("Effect of Alpha Value on Codon Entropy Ratio") +
+    ggtitle("Codon Entropy Ratio Comparing Between Sequences") +
     ylab("Entropy Ratio (P2/P3)")
-
 ```
 
+There seems to be an issue where the codon_entropy is calculating the entropy within a sequence, i.e. counting all the occurrences of 'A' at position 1 of each codon. Above, I calculated the entropy at each position in the sequence by comparing haplotype sequences. I'll try it the AlexPiper method below.
 
+```{r}
+haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
+
+codon_entropy_table <- data.frame(pos1=double(0), pos2=double(0), pos3=double(0))
+codon_entropy_ratios <- data.frame(method=character(0), entropy_ratio=double(0))
+
+start_time <- Sys.time()
+
+for (file in haplo_seqs) {
+  # read in file
+  haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
+  
+  
+  for (sequence in seq_along(haplo_seq_StringSet)) {
+    # Turn into vector of characters to select all bases in codon position 1, 2 and 3.
+    shifted_seq <- haplo_seq_StringSet[sequence] %>% as.character() %>% 
+    paste("--", ., sep = '') %>% 
+    str_split("") %>% 
+    unlist() 
+    
+    # Take every third base starting at positions 1, 2, and 3 to get the list of bases at each position
+    pos_1_bases <- shifted_seq[seq(1, length(shifted_seq), 3)]
+    pos_2_bases <- shifted_seq[seq(2, length(shifted_seq), 3)]
+    pos_3_bases <- shifted_seq[seq(3, length(shifted_seq), 3)]
+    
+    # Formula for Shannon H Entropy. find the probability of each base with table(pos)[base] / 47. Plug into Entropy formula
+    pos_1_entropy <- -sum((table(pos_1_bases)["A"] / 47) * log((table(pos_1_bases)["A"] / 47)) + 
+        (table(pos_1_bases)["C"] / 47) * log((table(pos_1_bases)["C"] / 47)) + 
+          (table(pos_1_bases)["G"] / 47) * log((table(pos_1_bases)["G"] / 47)) +
+          (table(pos_1_bases)["T"] / 47) * log((table(pos_1_bases)["T"] / 47)))
+
+    pos_2_entropy <- -sum((table(pos_2_bases)["A"] / 47) * log((table(pos_2_bases)["A"] / 47)) + 
+        (table(pos_2_bases)["C"] / 47) * log((table(pos_2_bases)["C"] / 47)) + 
+          (table(pos_2_bases)["G"] / 47) * log((table(pos_2_bases)["G"] / 47)) +
+          (table(pos_2_bases)["T"] / 47) * log((table(pos_2_bases)["T"] / 47)))
+    
+    pos_3_entropy <- -sum((table(pos_3_bases)["A"] / 48) * log((table(pos_3_bases)["A"] / 48)) + 
+        (table(pos_3_bases)["C"] / 48) * log((table(pos_3_bases)["C"] / 48)) + 
+          (table(pos_3_bases)["G"] / 48) * log((table(pos_3_bases)["G"] / 48)) +
+          (table(pos_3_bases)["T"] / 48) * log((table(pos_3_bases)["T"] / 48)))
+    codon_entropy_table <- add_row(codon_entropy_table, 
+                                   pos1 = pos_1_entropy,
+                                   pos2 = pos_2_entropy,
+                                   pos3 = pos_3_entropy)
+    }
+
+  
+  codon_entropy_ratio = mean(codon_entropy_table$pos2) / mean(codon_entropy_table$pos3, na.rm = TRUE)
+  
+  codon_entropy_ratios <- add_row(codon_entropy_ratios, 
+                                  method = substr(file, 23, nchar(file) - 52), 
+                                  entropy_ratio = codon_entropy_ratio)
+}
+
+end_time <- Sys.time() # end timer once for loop is completed
+
+end_time - start_time
+
+# Add column for maxee and alpha value
+codon_entropy_ratios$maxee <- parse_number(unlist(strsplit(codon_entropy_ratios$method, "alpha")))[seq(1, 32, 2)] 
+codon_entropy_ratios$maxee[codon_entropy_ratios$maxee == 0] <- 0.5
+codon_entropy_ratios$alpha <- parse_number(unlist(strsplit(codon_entropy_ratios$method, "alpha")))[seq(2, 32, 2)] 
+
+# Graph entropy ratio vs. alpha value for each ee.
+codon_entropy_ratios %>% 
+  ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
+    geom_line() +
+    scale_color_discrete() +
+    ggtitle("Codon Entropy Ratio Comparing Within Sequence") +
+    ylab("Entropy Ratio (P2/P3)")
+```
+
+The entropy ratio of codon position 2 and codon position 3 should be less than 1 (codon position 3 is more variable, and therefore has a higher entropy score). At low alpha values we are being very strict, this should remove more variability from position 2 (lower entropy score) while position 3 stays relatively unchanged (already variable). This should result in small ratios at low alpha values. As denoising becomes less strict there will be increased variability at codon 2 compared to codon 3 resulting in higher ratios at higher alpha values. For some reason I do not see that in either manual method. That is the trend supported by Weitmer et al. so I must be doing something wrong? I have double-checked the formulas, so I'm not really sure where this could be happening.
