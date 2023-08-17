@@ -1,0 +1,3647 @@
+BLASTX 2.13.0+
+
+
+Reference: Stephen F. Altschul, Thomas L. Madden, Alejandro A.
+Schaffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J.
+Lipman (1997), "Gapped BLAST and PSI-BLAST: a new generation of
+protein database search programs", Nucleic Acids Res. 25:3389-3402.
+
+
+
+Database: All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF
+excluding environmental samples from WGS projects
+           599,082,554 sequences; 235,353,967,185 total letters
+
+
+
+Query= OTU_1
+
+Length=142
+
+RID: DTX6FSWB013
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+AYI94477.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG27...  90.5    2e-21
+AOA21113.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BOL...  90.1    2e-21
+AON84924.1 cytochrome oxidase subunit 1 [Orthocladius dorenus]        90.5    2e-21
+AOO29767.1 cytochrome oxidase subunit 1 [Parakiefferiella finnmar...  90.5    2e-21
+AYI87593.1 cytochrome oxidase subunit 1 [Orthocladius oliveri]        90.1    2e-21
+AOG73930.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  90.5    3e-21
+AOG69220.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.4    3e-21
+AOD29898.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  90.5    3e-21
+AYI85479.1 cytochrome oxidase subunit 1 [Orthocladius rivicola]       90.5    3e-21
+AOL65354.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BOL...  90.1    3e-21
+AOH15893.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BOL...  90.1    3e-21
+AQS24132.1 cytochrome oxidase subunit 1 [Macropelopia nebulosa]       90.1    4e-21
+QBO90318.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   90.1    4e-21
+AWK39189.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       90.1    4e-21
+AWK36625.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       90.1    4e-21
+QBO87992.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG17...  90.1    4e-21
+AOG67538.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    4e-21
+AGY31315.1 cytochrome oxidase subunit I [Zavrelimyia (Paramerina)...  89.4    4e-21
+AOD28515.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  90.1    4e-21
+WDQ50837.1 cytochrome c oxidase subunit I, partial [Chironomidae ...  88.6    5e-21
+CAC1760493.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG...  90.1    5e-21
+QBO90440.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG17...  90.1    5e-21
+AOO52657.1 cytochrome oxidase subunit 1 [Smittia sp. BOLD-2016]       89.0    5e-21
+AYI86170.1 cytochrome oxidase subunit 1 [Orthocladius rivulorum]      90.1    5e-21
+AYI79930.1 cytochrome oxidase subunit 1 [Orthocladius sp. HLC-26588]  89.4    5e-21
+AYI87591.1 cytochrome oxidase subunit 1 [Orthocladius rivulorum]      90.1    5e-21
+AOO21648.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    6e-21
+AYI89983.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG30...  90.1    6e-21
+AOA22184.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  90.1    6e-21
+QBO90092.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   90.1    6e-21
+ANA00124.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AC...  90.1    6e-21
+QBO86522.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG17...  90.1    6e-21
+AYI83965.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG30...  90.1    7e-21
+AOA25392.1 cytochrome oxidase subunit 1 [Orthocladius rivulorum]      90.1    7e-21
+AOQ37770.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    7e-21
+AOV79576.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  88.6    7e-21
+AYI91557.1 cytochrome oxidase subunit 1 [Orthocladius oliveri]        89.7    7e-21
+AOA27917.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD-...  88.2    7e-21
+QIS89918.1 cytochrome oxidase subunit 1 [Orthocladius nitidoscute...  90.1    7e-21
+QBO76015.1 cytochrome oxidase subunit 1 [Procladius sp. BIOUG1801...  88.2    7e-21
+AMK84078.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          90.1    7e-21
+QBO87763.1 cytochrome oxidase subunit 1 [Procladius sp. BIOUG0954...  88.6    8e-21
+AYI89174.1 cytochrome oxidase subunit 1 [Paraphaenocladius impensus]  88.2    8e-21
+AOO20948.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    8e-21
+AMK87733.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  90.1    8e-21
+AOA22182.1 cytochrome oxidase subunit 1 [Orthocladius rivulorum]      90.1    8e-21
+AOA30042.1 cytochrome oxidase subunit 1 [Orthocladius rivulorum]      89.7    8e-21
+AXP91600.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG24...  89.7    8e-21
+AOO20192.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    8e-21
+AOO20959.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    8e-21
+AOQ68948.1 cytochrome oxidase subunit 1 [Smittia sp. BOLD-2016]       88.6    8e-21
+WDQ53192.1 cytochrome c oxidase subunit I, partial [Chironomidae ...  87.8    8e-21
+AOO20461.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    8e-21
+QBO76413.1 cytochrome oxidase subunit 1 [Procladius sp. BIOUG1800...  88.6    8e-21
+AOQ64732.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    9e-21
+ALT94243.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          90.1    9e-21
+ALF44546.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    9e-21
+AOD70188.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       89.7    9e-21
+ALH07627.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          90.1    9e-21
+QBO79959.1 cytochrome oxidase subunit 1 [Lasiodiamesa sphagnicola]    90.1    9e-21
+QIS90260.1 cytochrome oxidase subunit 1 [Cricotopus gelidus]          87.8    9e-21
+QBO78193.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG24...  90.1    9e-21
+AOA21845.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    9e-21
+ALT90500.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          90.1    9e-21
+AWU62842.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG14...  90.1    9e-21
+AYI95481.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BAR...  90.1    9e-21
+AOQ34057.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    9e-21
+AOQ35701.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    9e-21
+AOO21248.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    9e-21
+AOO29788.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    9e-21
+QBO89199.1 cytochrome oxidase subunit 1 [Procladius sp. BIOUG1800...  88.6    9e-21
+ALR49690.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  90.1    9e-21
+ANE98533.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD-...  90.1    9e-21
+AXP98189.1 cytochrome oxidase subunit 1 [Tanypus sp. BIOUG24395-A10]  89.7    9e-21
+AOO20918.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    9e-21
+AOQ67237.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    9e-21
+QBO90222.1 cytochrome oxidase subunit 1 [Cricotopus sp. BIOUG1847...  87.8    9e-21
+ALT88598.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          90.1    9e-21
+ALT88850.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          90.1    9e-21
+AOO44402.1 cytochrome oxidase subunit 1, partial [Derotanypus ala...  89.7    9e-21
+AOQ33629.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    9e-21
+ALT86287.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+ALT99787.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOD36112.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    1e-20
+AOO30115.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO52371.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOD67454.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOQ32382.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ31435.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOA13872.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AYI86479.1 cytochrome oxidase subunit 1 [Heterotrissocladius sp. ...  88.2    1e-20
+AXP94330.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG22...  89.7    1e-20
+AOQ37484.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOH17193.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   90.1    1e-20
+AOD33255.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOD28550.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+ALF72898.1 cytochrome oxidase subunit 1 [Orthocladius sp. RRMPA75...  89.7    1e-20
+AOO21098.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOL63385.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOO22889.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO21311.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+QBF38557.1 cytochrome oxidase subunit I [Simulium pseudequinum]       87.0    1e-20
+AOO21400.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ32982.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO28195.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO30358.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO24047.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO30190.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO25685.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOH15598.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO23161.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOV64877.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOD31256.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOH15039.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ51753.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOD33006.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO27796.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AYI91477.1 cytochrome oxidase subunit 1 [Orthocladius decoratus]      89.7    1e-20
+AYI88433.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.7    1e-20
+AOD32276.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    1e-20
+ALT99998.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOQ31271.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ36920.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALU03774.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+ALT98669.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOG73338.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.7    1e-20
+AOQ33116.1 cytochrome oxidase subunit 1 [Psectrocladius cf. limba...  88.2    1e-20
+AOI27337.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO21988.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+QPG25351.1 cytochrome c oxidase subunit I [Zavrelimyia (Paramerin...  89.4    1e-20
+AOO23375.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ67275.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOO26473.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ31040.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALF79450.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOD30222.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOQ31126.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    1e-20
+AOH14796.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    1e-20
+AOO45902.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOO30637.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+QZP41390.1 cytochrome oxidase subunit 1 [Macropelopia nebulosa]       89.7    1e-20
+AWN91175.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG14...  89.7    1e-20
+AOO21655.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ43318.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    1e-20
+AMK91226.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+AOG66714.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO25532.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO22802.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AND56145.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOQ39972.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO25292.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALU01424.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+QBO85695.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG21...  89.7    1e-20
+AWU61644.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG206...  89.7    1e-20
+ALT98483.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+AOH13712.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALP21716.1 cytochrome oxidase subunit 1 [Lasiodiamesa sphagnicola]    90.1    1e-20
+AOQ69757.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp....  90.1    1e-20
+AOA16829.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO25905.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    1e-20
+AOO25016.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOG67705.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AMC23586.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+AOO20979.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOG67211.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO32090.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOH15721.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO27393.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOD33302.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+ALT88729.1 cytochrome oxidase subunit 1, partial [Parochlus kieff...  89.7    1e-20
+ALP20694.1 cytochrome oxidase subunit 1 [Lasiodiamesa sphagnicola]    89.7    1e-20
+AON81199.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOG71272.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    1e-20
+AOL61067.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   90.1    1e-20
+AOG71043.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO22290.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AYI83333.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.7    1e-20
+AOQ75624.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOD66758.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALT90562.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  90.1    1e-20
+AWN85950.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AYI86335.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOO24957.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOD29974.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOD38968.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+QBO89627.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG17...  89.7    1e-20
+QBO75582.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG16...  87.8    1e-20
+AOV68798.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AMK90138.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOO41892.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOL70261.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AOA29020.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO27405.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOQ45133.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALT90811.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOO29883.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALL48828.1 cytochrome oxidase subunit 1, partial [Anopheles sp. B...  90.1    1e-20
+ALT85077.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    1e-20
+AOD33964.1 cytochrome oxidase subunit 1, partial [Orthocladius ro...  89.7    1e-20
+AOQ33177.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    1e-20
+AOD37312.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.7    1e-20
+AOQ54968.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+QBO79262.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOA28699.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       89.7    1e-20
+AOQ88367.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AON81413.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AWN89191.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+AOQ34276.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO23097.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOH15447.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOO28075.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AYI83202.1 cytochrome oxidase subunit 1, partial [Orthocladius ol...  89.7    1e-20
+AOQ34554.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ49574.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ82004.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+ALT96116.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    1e-20
+AMC30084.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD:AAN...  90.1    1e-20
+AOH15590.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  90.1    1e-20
+AWU63147.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG204...  90.1    1e-20
+AWK36276.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.7    1e-20
+AOQ38780.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ83458.1 cytochrome oxidase subunit 1 [Prodiamesa olivacea]         89.7    1e-20
+AXP22155.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG23...  89.7    1e-20
+AOA26508.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+ALT99217.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALF83705.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOA20052.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD-...  87.8    1e-20
+AOQ31965.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ66640.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOA20826.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOO20768.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO20874.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOA25065.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+QBO88711.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG17...  89.7    1e-20
+AOD36766.1 cytochrome oxidase subunit 1 [Paraphaenocladius sp. BO...  87.8    1e-20
+AOQ35789.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO20455.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOG72385.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AWN88609.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+AOG70254.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AWU61124.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG205...  89.7    1e-20
+AMK88508.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOH29719.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOQ32856.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+QBO81201.1 cytochrome oxidase subunit 1 [Tanypus sp. BIOUG24361-H09]  89.7    1e-20
+AOO27263.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AMC18630.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AYI87143.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG30...  89.7    1e-20
+AOO27040.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOD35582.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AXP97898.1 cytochrome oxidase subunit 1 [Tanypus sp. BIOUG24395-A08]  89.7    1e-20
+AOQ71515.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+ALT95810.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AYI88190.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG073...  89.7    1e-20
+AOG67241.1 cytochrome oxidase subunit 1, partial [Orthocladius ro...  89.7    1e-20
+AWS11496.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.7    1e-20
+AYI88948.1 cytochrome oxidase subunit 1 [Prodiamesa olivacea]         89.7    1e-20
+AOI26539.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOQ35702.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOA19436.1 cytochrome oxidase subunit 1 [Tanypus neopunctipennis]     89.7    1e-20
+AWN88367.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG25...  89.7    1e-20
+AOA28657.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AMC25388.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+AKA62677.1 cytochrome c oxidase subunit 1, partial [Chironomidae ...  87.8    1e-20
+AOQ66803.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp....  90.1    1e-20
+AOG71860.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOQ31338.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AND55017.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOO20956.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ39294.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO28109.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALF71606.1 cytochrome oxidase subunit 1 [Orthocladius oliveri]        89.7    1e-20
+AOO44637.1 cytochrome oxidase subunit 1, partial [Derotanypus ala...  89.7    1e-20
+AOD37203.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  90.1    1e-20
+AOO21781.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ65903.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOD30509.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AOG68983.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOH26195.1 cytochrome oxidase subunit 1, partial [Derotanypus ala...  89.7    1e-20
+AOQ37635.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALT93854.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+AOA15071.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+ALP19201.1 cytochrome oxidase subunit 1 [Chironomidae sp. SSBAF81...  89.7    1e-20
+ALF72627.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AA...  89.7    1e-20
+AOA20451.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOI25148.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOQ36529.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALT93786.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AMK90199.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD:...  89.7    1e-20
+AOA18227.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AYI83248.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG30...  89.7    1e-20
+ALT95356.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO21758.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO27011.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AWN90074.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG20...  89.7    1e-20
+AOQ36332.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO20182.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+QBO89693.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG16...  89.7    1e-20
+AOO24389.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALT94696.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+AOO23178.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+QBO78761.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG215...  89.7    1e-20
+AEC50040.1 cytochrome oxidase subunit 1 [Forcipomyia sp. CW-2011]     89.7    1e-20
+AOD37018.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AWN92110.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG26...  89.7    1e-20
+AOA17911.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOO22027.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AOI24936.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOG73147.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AWN89073.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG205...  89.7    1e-20
+QBO76788.1 cytochrome oxidase subunit 1 [Tanypus sp. BIOUG24360-H03]  89.7    1e-20
+AOO30484.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+ALF74783.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AA...  89.7    1e-20
+AOO23164.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+ALF76436.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AA...  89.4    1e-20
+AOD29382.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO23002.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ33545.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       89.7    1e-20
+ALF83003.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+AMC18367.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOA28414.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOI24869.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO25050.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO20373.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AYI90009.1 cytochrome oxidase subunit 1 [Orthocladius oliveri]        89.7    1e-20
+AYI85801.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG25...  89.7    1e-20
+AOD37024.1 cytochrome oxidase subunit 1, partial [Orthocladius ro...  89.7    1e-20
+AND57332.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AMZ86429.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AND58338.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOO24860.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO28881.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO27108.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ35847.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOV69923.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AOO20137.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALT92574.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+AMK81917.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD:...  89.7    1e-20
+AOQ38079.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+ALT95108.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.4    1e-20
+AWN90247.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ34300.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AMC24438.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALT84245.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AWN86797.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG207...  89.7    1e-20
+AWS11121.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.7    1e-20
+AOQ75675.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+ALU01134.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AA...  89.7    1e-20
+AOO29036.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOV65445.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOG72461.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       89.7    1e-20
+AOD70968.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOA18096.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO25044.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOG68817.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  88.2    1e-20
+ANA02917.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AOA25959.1 cytochrome oxidase subunit 1, partial [Prodiamesa oliv...  89.7    1e-20
+AOV79513.1 cytochrome oxidase subunit 1 [Psilometriocnemus sp. BO...  89.7    1e-20
+AOG72518.1 cytochrome oxidase subunit 1 [Orthocladius oblidens]       89.7    1e-20
+ALF76487.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AA...  89.7    1e-20
+AOG70354.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AYI88568.1 cytochrome oxidase subunit 1 [Orthocladius oliveri]        89.7    1e-20
+AOG67278.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.7    1e-20
+ALR62331.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+ALL50309.1 cytochrome oxidase subunit 1, partial [Lasiodiamesa sp...  89.7    1e-20
+AOO20186.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AYI84788.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG25...  89.4    1e-20
+AOO22194.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+ALF72912.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+ALU05724.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOA15567.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOO30312.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AMC25017.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOO49722.1 cytochrome oxidase subunit 1, partial [Derotanypus ala...  89.7    1e-20
+AOD73393.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOO20437.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO29200.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOL66894.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BOL...  89.4    1e-20
+AOA27942.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO20335.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AON84038.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO46380.1 cytochrome oxidase subunit 1 [Psilometriocnemus sp. BO...  89.4    1e-20
+AOO27533.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+QBO76296.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG17...  89.7    1e-20
+AYI83866.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOA30176.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO22153.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOA15003.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AOO27795.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOG73006.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.4    1e-20
+AMK79827.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AOO20196.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO20840.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AWN89957.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BIOUG206...  89.7    1e-20
+AMZ94065.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.4    1e-20
+AON80721.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AOO21015.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOG67784.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO27772.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+QBO80962.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG24...  89.7    1e-20
+ALF75390.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AC...  89.7    1e-20
+AOO27187.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ36858.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOA26913.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+ALF76410.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+QBO78743.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.7    1e-20
+AOO31431.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOQ52670.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.4    1e-20
+ANA04234.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AC...  89.7    1e-20
+AOO20755.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOG73349.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.7    1e-20
+AOA23729.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOO20783.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AON81839.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AYI87098.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AND57551.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOQ43605.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AWK38568.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BIOUG...  89.7    1e-20
+AOO20911.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOG67758.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AOL63203.1 cytochrome oxidase subunit 1, partial [Derotanypus ala...  89.7    1e-20
+QIS90258.1 cytochrome oxidase subunit 1 [Psectrocladius limbatellus]  88.2    1e-20
+AOG67233.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AYI82896.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.4    1e-20
+AOO26853.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO26915.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOD34810.1 cytochrome oxidase subunit 1, partial [Orthocladius ro...  89.7    1e-20
+ALF72434.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOQ34168.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO20666.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AMC26887.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. CNGBK...  89.7    1e-20
+AOQ77649.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BOL...  89.7    1e-20
+AOQ34515.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOL68710.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BOL...  89.7    1e-20
+AMZ90206.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AOD39571.1 cytochrome oxidase subunit 1 [Orthocladius sp. TE13]       89.7    1e-20
+AWS11502.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.7    1e-20
+AOO21184.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO29299.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ78769.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AOO25585.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOA20497.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOG71437.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.7    1e-20
+ALT99923.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD:...  89.7    1e-20
+AOD39415.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOD30861.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOL62455.1 cytochrome oxidase subunit 1 [Psilometriocnemus sp. BO...  89.7    1e-20
+AOO41787.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOO28342.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOQ78761.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AWK38923.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG16...  89.4    1e-20
+AOA13972.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AOQ34744.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOA18348.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AON82357.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AOA16350.1 cytochrome oxidase subunit 1, partial [Orthocladius ri...  89.4    1e-20
+AOG69647.1 cytochrome oxidase subunit 1 [Orthocladius roussellae]     89.4    1e-20
+AOQ36034.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AMC22887.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AON82962.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+ALF74654.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AA...  89.7    1e-20
+AYI87449.1 cytochrome oxidase subunit 1 [Orthocladius sp. BIOUG25...  89.7    1e-20
+AOO28628.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOO21384.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOO20336.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+QBO88710.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG16...  87.8    1e-20
+AOV77610.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOQ37986.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO45732.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOQ31463.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD-2016]  89.7    1e-20
+AOO31008.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AWN89964.1 cytochrome oxidase subunit 1 [Chironomidae sp. BIOUG15...  89.7    1e-20
+AMC21860.1 cytochrome oxidase subunit 1 [Chironomidae sp. BOLD:AC...  89.7    1e-20
+AMK87519.1 cytochrome oxidase subunit 1 [Parochlus kiefferi]          89.7    1e-20
+AOQ68107.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp....  89.7    1e-20
+AOL68981.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AYI82823.1 cytochrome oxidase subunit 1 [Parakiefferiella sp. BIO...  89.4    1e-20
+AOO22748.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+QBO80144.1 cytochrome oxidase subunit 1 [Tanypus sp. BIOUG24360-F06]  89.7    1e-20
+ALT90247.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOA21324.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.4    1e-20
+AOL64611.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AON82929.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AMK89810.1 cytochrome oxidase subunit 1 [Orthocladiinae sp. BOLD:...  89.7    1e-20
+AOL64571.1 cytochrome oxidase subunit 1, partial [Parakiefferiell...  89.7    1e-20
+ALT89454.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+WAH67429.1 cytochrome c oxidase subunit I [Monodiamesa bathyphila]    89.7    1e-20
+AOA25476.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.7    1e-20
+AOO20317.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AOD39419.1 cytochrome oxidase subunit 1 [Parakiefferiella scandica]   89.7    1e-20
+AOD74137.1 cytochrome oxidase subunit 1 [Derotanypus alaskensis]      89.7    1e-20
+AOO21899.1 cytochrome oxidase subunit 1, partial [Chironomidae sp...  89.7    1e-20
+AMZ96132.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD:AC...  89.7    1e-20
+AOD37809.1 cytochrome oxidase subunit 1, partial [Orthocladius ro...  89.7    1e-20
+AOQ64873.1 cytochrome oxidase subunit 1 [Tanypodinae sp. BOLD-2016]   89.7    1e-20
+AOL68702.1 cytochrome oxidase subunit 1, partial [Parakiefferiell...  89.7    1e-20
+AOA17349.1 cytochrome oxidase subunit 1, partial [Orthocladius sp...  89.7    1e-20
+AOA26407.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AOD36438.1 cytochrome oxidase subunit 1 [Orthocladius sp. BOLD-2016]  89.4    1e-20
+AYI83147.1 cytochrome oxidase subunit 1 [Rheosmittia spinicornis]     89.4    1e-20
+
+
+>AYI94477.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG27691-F07]
+Length=135
+
+ Score = 90.5 bits (223),  Expect = 2e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  53   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  99
+
+
+>AOA21113.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BOLD-2016]
+Length=119
+
+ Score = 90.1 bits (222),  Expect = 2e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  35   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  81
+
+
+>AON84924.1 cytochrome oxidase subunit 1, partial [Orthocladius dorenus]
+Length=139
+
+ Score = 90.5 bits (223),  Expect = 2e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  67   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  113
+
+
+>AOO29767.1 cytochrome oxidase subunit 1, partial [Parakiefferiella finnmarkica]
+Length=143
+
+ Score = 90.5 bits (223),  Expect = 2e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  66   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  112
+
+
+>AYI87593.1 cytochrome oxidase subunit 1, partial [Orthocladius oliveri]
+Length=129
+
+ Score = 90.1 bits (222),  Expect = 2e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  66   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  112
+
+
+>AOG73930.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=141
+
+ Score = 90.5 bits (223),  Expect = 3e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  51   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  97
+
+
+>AOG69220.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+Length=104
+
+ Score = 89.4 bits (220),  Expect = 3e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  14   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  60
+
+
+>AOD29898.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=144
+
+ Score = 90.5 bits (223),  Expect = 3e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  54   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  100
+
+
+>AYI85479.1 cytochrome oxidase subunit 1, partial [Orthocladius rivicola]
+Length=144
+
+ Score = 90.5 bits (223),  Expect = 3e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  54   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  100
+
+
+>AOL65354.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BOLD-2016]
+Length=139
+
+ Score = 90.1 bits (222),  Expect = 3e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  67   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  113
+
+
+>AOH15893.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BOLD-2016]
+Length=137
+
+ Score = 90.1 bits (222),  Expect = 3e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  78   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  124
+
+
+>AQS24132.1 cytochrome oxidase subunit 1, partial [Macropelopia nebulosa]
+Length=145
+
+ Score = 90.1 bits (222),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  86   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  132
+
+
+>QBO90318.1 cytochrome oxidase subunit 1, partial [Parakiefferiella scandica]
+Length=151
+
+ Score = 90.1 bits (222),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  67   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  113
+
+
+>AWK39189.1 cytochrome oxidase subunit 1, partial [Orthocladius oblidens]
+Length=151
+
+ Score = 90.1 bits (222),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  64   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  110
+
+
+>AWK36625.1 cytochrome oxidase subunit 1, partial [Orthocladius oblidens]
+Length=154
+
+ Score = 90.1 bits (222),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  70   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  116
+
+
+>QBO87992.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG17009-F01]
+Length=156
+
+ Score = 90.1 bits (222),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  70   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  116
+
+
+>AOG67538.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=139
+
+ Score = 89.7 bits (221),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  85   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  131
+
+
+>AGY31315.1 cytochrome oxidase subunit I, partial [Zavrelimyia (Paramerina) 
+sp. 4 MEC-2013]
+Length=132
+
+ Score = 89.4 bits (220),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  29   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  75
+
+
+>AOD28515.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=160
+
+ Score = 90.1 bits (222),  Expect = 4e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  69   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  115
+
+
+>WDQ50837.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ51390.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ51742.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ52223.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ52678.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+Length=104
+
+ Score = 88.6 bits (218),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  1    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  47
+
+
+>CAC1760493.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG12692-H09]
+Length=151
+
+ Score = 90.1 bits (222),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  48   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  94
+
+
+>QBO90440.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG17015-B11]
+Length=164
+
+ Score = 90.1 bits (222),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  81   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  127
+
+
+>AOO52657.1 cytochrome oxidase subunit 1, partial [Smittia sp. BOLD-2016]
+Length=115
+
+ Score = 89.0 bits (219),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGIT 
+Sbjct  43   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITF  89
+
+
+>AYI86170.1 cytochrome oxidase subunit 1, partial [Orthocladius rivulorum]
+Length=161
+
+ Score = 90.1 bits (222),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>AYI79930.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. HLC-26588]
+Length=139
+
+ Score = 89.4 bits (220),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  36   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  82
+
+
+>AYI87591.1 cytochrome oxidase subunit 1, partial [Orthocladius rivulorum]
+Length=162
+
+ Score = 90.1 bits (222),  Expect = 5e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>AOO21648.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=167
+
+ Score = 90.1 bits (222),  Expect = 6e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  81   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  127
+
+
+>AYI89983.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG30416-A07]
+Length=162
+
+ Score = 90.1 bits (222),  Expect = 6e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  66   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  112
+
+
+>AOA22184.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=165
+
+ Score = 90.1 bits (222),  Expect = 6e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  87   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  133
+
+
+>QBO90092.1 cytochrome oxidase subunit 1, partial [Parakiefferiella scandica]
+Length=166
+
+ Score = 90.1 bits (222),  Expect = 6e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  80   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  126
+
+
+>ANA00124.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD:ACA4801]
+Length=167
+
+ Score = 90.1 bits (222),  Expect = 6e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  89   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  135
+
+
+>QBO86522.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG17161-H07]
+Length=163
+
+ Score = 90.1 bits (222),  Expect = 6e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  67   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  113
+
+
+>AYI83965.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG30416-F08]
+Length=166
+
+ Score = 90.1 bits (222),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  80   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  126
+
+
+>AOA25392.1 cytochrome oxidase subunit 1, partial [Orthocladius rivulorum]
+Length=167
+
+ Score = 90.1 bits (222),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  75   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  121
+
+
+>AOQ37770.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 90.1 bits (222),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  86   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  132
+
+
+>AOV79576.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=111
+
+ Score = 88.6 bits (218),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  32   LSSGIAHAGGSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  78
+
+
+>AYI91557.1 cytochrome oxidase subunit 1, partial [Orthocladius oliveri]
+Length=164
+
+ Score = 89.7 bits (221),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  69   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  115
+
+
+>AOA27917.1 cytochrome oxidase subunit 1, partial [Orthocladiinae sp. BOLD-2016]
+Length=108
+
+ Score = 88.2 bits (217),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG+SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  22   LSSGIAHAGSSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  68
+
+
+>QIS89918.1 cytochrome oxidase subunit 1, partial [Orthocladius nitidoscutellatus]
+Length=169
+
+ Score = 90.1 bits (222),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  86   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  132
+
+
+>QBO76015.1 cytochrome oxidase subunit 1, partial [Procladius sp. BIOUG18015-E09]
+Length=105
+
+ Score = 88.2 bits (217),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 45/47 (96%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            L+SGIAHAGASVDLAIFSLHLAG+SSILGAVNFITTVINMRSNGITL
+Sbjct  23   LASGIAHAGASVDLAIFSLHLAGVSSILGAVNFITTVINMRSNGITL  69
+
+
+>AMK84078.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=170
+
+ Score = 90.1 bits (222),  Expect = 7e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>QBO87763.1 cytochrome oxidase subunit 1, partial [Procladius sp. BIOUG09547-B08]
+Length=121
+
+ Score = 88.6 bits (218),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 45/47 (96%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            L+SGIAHAGASVDLAIFSLHLAG+SSILGAVNFITTVINMRSNGITL
+Sbjct  38   LASGIAHAGASVDLAIFSLHLAGVSSILGAVNFITTVINMRSNGITL  84
+
+
+>AYI89174.1 cytochrome oxidase subunit 1, partial [Paraphaenocladius impensus]
+Length=107
+
+ Score = 88.2 bits (217),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  41   LSSGIAHAGGSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  87
+
+
+>AOO20948.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 90.1 bits (222),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>AMK87733.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=171
+
+ Score = 90.1 bits (222),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  90   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  136
+
+
+>AOA22182.1 cytochrome oxidase subunit 1, partial [Orthocladius rivulorum]
+Length=172
+
+ Score = 90.1 bits (222),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  87   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  133
+
+
+>AOA30042.1 cytochrome oxidase subunit 1, partial [Orthocladius rivulorum]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>AXP91600.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG24511-H02]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO20192.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  87   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  133
+
+
+>AOO20959.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO29534.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=176
+
+ Score = 90.1 bits (222),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>AOQ68948.1 cytochrome oxidase subunit 1, partial [Smittia sp. BOLD-2016]
+Length=118
+
+ Score = 88.6 bits (218),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGIT 
+Sbjct  27   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITF  73
+
+
+>WDQ53192.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ54056.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ54222.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ54570.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+ WDQ54873.1 cytochrome c oxidase subunit I, partial [Chironomidae sp.]
+Length=104
+
+ Score = 87.8 bits (216),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITT+INMRSNGITL
+Sbjct  1    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTIINMRSNGITL  47
+
+
+>AOO20461.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 90.1 bits (222),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  88   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  134
+
+
+>QBO76413.1 cytochrome oxidase subunit 1, partial [Procladius sp. BIOUG18009-F06]
+Length=124
+
+ Score = 88.6 bits (218),  Expect = 8e-21, Method: Compositional matrix adjust.
+ Identities = 45/47 (96%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            L+SGIAHAGASVDLAIFSLHLAG+SSILGAVNFITTVINMRSNGITL
+Sbjct  38   LASGIAHAGASVDLAIFSLHLAGVSSILGAVNFITTVINMRSNGITL  84
+
+
+>AOQ64732.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=169
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  91   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  137
+
+
+>ALT94243.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=179
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>ALF44546.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  103  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  149
+
+
+>AOD70188.1 cytochrome oxidase subunit 1, partial [Orthocladius oblidens]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  88   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  134
+
+
+>ALH07627.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=177
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>QBO79959.1 cytochrome oxidase subunit 1, partial [Lasiodiamesa sphagnicola]
+Length=175
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>QIS90260.1 cytochrome oxidase subunit 1, partial [Cricotopus gelidus]
+Length=99
+
+ Score = 87.8 bits (216),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRS GITL
+Sbjct  22   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSEGITL  68
+
+
+>QBO78193.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG24286-E04]
+Length=175
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOA21845.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=168
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>ALT90500.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=175
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  96   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+
+
+>AWU62842.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG14978-D12]
+Length=176
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>AYI95481.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BARS_2015_34_120]
+Length=176
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>AOQ34057.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  88   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  134
+
+
+>AOQ35701.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=180
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  109  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  155
+
+
+>AOO21248.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  100  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  146
+
+
+>AOO29788.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ37800.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>QBO89199.1 cytochrome oxidase subunit 1, partial [Procladius sp. BIOUG18009-E01]
+Length=123
+
+ Score = 88.6 bits (218),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 45/47 (96%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            L+SGIAHAGASVDLAIFSLHLAG+SSILGAVNFITTVINMRSNGITL
+Sbjct  36   LASGIAHAGASVDLAIFSLHLAGVSSILGAVNFITTVINMRSNGITL  82
+
+
+>ALR49690.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP6904]
+Length=176
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  83   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  129
+
+
+>ANE98533.1 cytochrome oxidase subunit 1, partial [Orthocladiinae sp. BOLD-2016]
+Length=178
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AXP98189.1 cytochrome oxidase subunit 1, partial [Tanypus sp. BIOUG24395-A10]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  80   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  126
+
+
+>AOO20918.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO25240.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO29215.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ34513.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOQ67237.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=168
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>QBO90222.1 cytochrome oxidase subunit 1, partial [Cricotopus sp. BIOUG18479-D10]
+Length=100
+
+ Score = 87.8 bits (216),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRS GITL
+Sbjct  20   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSEGITL  66
+
+
+>ALT88598.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=180
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>ALT88850.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=178
+
+ Score = 90.1 bits (222),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOO44402.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+ AXP22134.1 cytochrome oxidase subunit 1, partial [Tanypus sp. BIOUG24395-B02]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>AOQ33629.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 9e-21, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  96   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+
+
+>ALT86287.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>ALT99787.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOD36112.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO30115.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOO52371.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  94   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  140
+
+
+>AOD67454.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOQ32382.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOQ31435.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>AOA13872.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  100  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  146
+
+
+>AYI86479.1 cytochrome oxidase subunit 1, partial [Heterotrissocladius sp. 
+BIOUG05574-G09]
+Length=122
+
+ Score = 88.2 bits (217),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  67   LSSGIAHAGGSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  113
+
+
+>AXP94330.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG22770-E06]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOQ37484.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOH17193.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=180
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  103  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  149
+
+
+>AOD33255.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOD28550.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOD29951.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOD36925.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOG68052.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOO24664.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>ALF72898.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. RRMPA758-15]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  112  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  158
+
+
+>AOO21098.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ35078.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ36998.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOL63385.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOO22889.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  94   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  140
+
+
+>AOO21311.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO21592.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO22535.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO22539.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO22946.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>QBF38557.1 cytochrome oxidase subunit I, partial [Simulium pseudequinum]
+Length=85
+
+ Score = 87.0 bits (214),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 45/47 (96%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITT+INMRSNGIT 
+Sbjct  20   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTIINMRSNGITF  66
+
+
+>AOO21400.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO28866.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOQ32982.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  109  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  155
+
+
+>AOO28195.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>AOO30358.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ32081.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ33109.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO24047.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOO30190.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOO25685.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ34569.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOH15598.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=167
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  95   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  141
+
+
+>AOO23161.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO31072.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>AOV64877.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOD31256.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>AOH15039.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOQ51753.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ52908.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOD33006.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  94   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  140
+
+
+>AOO27796.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO28458.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO29345.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  111  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  157
+
+
+>AYI91477.1 cytochrome oxidase subunit 1, partial [Orthocladius decoratus]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AYI88433.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BIOUG31038-D02]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOD32276.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=182
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>ALT99998.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  105  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  151
+
+
+>AOQ31271.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  105  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  151
+
+
+>AOQ36920.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  84   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  130
+
+
+>ALU03774.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>ALT98669.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  96   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+
+
+>AOG73338.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AOQ33116.1 cytochrome oxidase subunit 1, partial [Psectrocladius cf. limbatellus 
+BOLD-2016]
+Length=114
+
+ Score = 88.2 bits (217),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  28   LSSGIAHAGGSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  74
+
+
+>AOI27337.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  96   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+
+
+>AOO21988.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  94   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  140
+
+
+>QPG25351.1 cytochrome c oxidase subunit I, partial [Zavrelimyia (Paramerina) 
+sp. NSWNew17.1.2]
+Length=158
+
+ Score = 89.4 bits (220),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOO23375.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ38381.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  103  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  149
+
+
+>AOQ67275.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOO26473.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOQ31040.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  95   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  141
+
+
+>ALF79450.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+ ALT87261.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+Length=181
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  112  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  158
+
+
+>AOD30222.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  92   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  138
+
+
+>AOQ31126.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ37870.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=182
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOH14796.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=182
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOO45902.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOO30637.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>QZP41390.1 cytochrome oxidase subunit 1, partial [Macropelopia nebulosa]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  70   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  116
+
+
+>AWN91175.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG14979-B08]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AOO21655.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO23301.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO23908.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO31035.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO31283.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=179
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOQ43318.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ QBO77176.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG23986-F09]
+Length=187
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AMK91226.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAN5360]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  115  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  161
+
+
+>AOG66714.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO25532.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOO22802.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  90   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  136
+
+
+>AND56145.1 cytochrome oxidase subunit 1, partial [Rheosmittia spinicornis]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOQ39972.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  113  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  159
+
+
+>AOO25292.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ38762.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=179
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>ALU01424.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  113  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  159
+
+
+>QBO85695.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG21949-C11]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AWU61644.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20610-G11]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  111  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  157
+
+
+>ALT98483.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOH13712.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  113  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  159
+
+
+>ALP21716.1 cytochrome oxidase subunit 1, partial [Lasiodiamesa sphagnicola]
+Length=183
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  114  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  160
+
+
+>AOQ69757.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+ AOQ70132.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=183
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOA16829.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO25905.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO26859.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=184
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOO25016.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOO25796.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOO27469.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOO29700.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOO31211.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AOG67705.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOQ33720.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  93   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  139
+
+
+>AMC23586.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=180
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  111  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  157
+
+
+>AOO20979.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO21884.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO22199.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO24584.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO27089.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  103  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  149
+
+
+>AOG67211.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=181
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AOO32090.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=181
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  88   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  134
+
+
+>AOH15721.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOO27393.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOD33302.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>ALT88729.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+ AMC20357.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+ AOA29772.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>ALP20694.1 cytochrome oxidase subunit 1, partial [Lasiodiamesa sphagnicola]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AON81199.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  110  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  156
+
+
+>AOG71272.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=184
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOL61067.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=184
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOG71043.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO22290.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO22743.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO23204.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO27466.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ32751.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AYI83333.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BIOUG25596-B08]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>AOQ75624.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>AOD66758.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOH25564.1 cytochrome oxidase subunit 1, partial [Orthocladius oblidens]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>ALT90562.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=185
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AWN85950.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AYI86335.1 cytochrome oxidase subunit 1, partial [Rheosmittia spinicornis]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOO24957.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=180
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  109  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  155
+
+
+>AOD29974.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=180
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOD38968.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=181
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  100  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  146
+
+
+>QBO89627.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG17016-D12]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  111  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  157
+
+
+>QBO75582.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG16686-B05]
+Length=111
+
+ Score = 87.8 bits (216),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFS HLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  26   LSSGIAHAGASVDLAIFSXHLAGISSILGAVNFITTVINMRSNGITL  72
+
+
+>AOV68798.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  109  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  155
+
+
+>AMK90138.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  113  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  159
+
+
+>AOO41892.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  114  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  160
+
+
+>AOL70261.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=167
+
+ Score = 89.4 bits (220),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOA29020.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>AOO27405.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOQ31904.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  100  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  146
+
+
+>AOQ45133.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  100  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  146
+
+
+>ALT90811.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOO29883.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>ALL48828.1 cytochrome oxidase subunit 1, partial [Anopheles sp. BOLD:ACB9644]
+ AWN90163.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG20371-A11]
+Length=185
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>ALT85077.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+ ALU03844.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+ AMK88386.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=185
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  105  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  151
+
+
+>AOD33964.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+ AOG69512.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+ AOG70178.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+ AOG73116.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AOQ33177.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=187
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  109  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  155
+
+
+>AOD37312.1 cytochrome oxidase subunit 1, partial [Orthocladius roussellae]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  103  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  149
+
+
+>AOQ54968.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=170
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>QBO79262.1 cytochrome oxidase subunit 1, partial [Rheosmittia spinicornis]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  95   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  141
+
+
+>AOA28699.1 cytochrome oxidase subunit 1, partial [Orthocladius oblidens]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  97   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  143
+
+
+>AOQ88367.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=171
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AON81413.1 cytochrome oxidase subunit 1, partial [Parakiefferiella scandica]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AWN89191.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  112  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  158
+
+
+>AOQ34276.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ37668.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ38177.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOO23097.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO24777.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO27773.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO30287.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ33185.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=183
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AOH15447.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  112  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  158
+
+
+>AOO28075.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AYI83202.1 cytochrome oxidase subunit 1, partial [Orthocladius oliveri]
+ AYI86516.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG30417-B08]
+Length=172
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  92   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  138
+
+
+>AOQ34554.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=184
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  112  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  158
+
+
+>AOQ49574.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  102  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  148
+
+
+>AOQ82004.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=173
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>ALT96116.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+ AMC20675.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+ AWN91432.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20513-E05]
+ AWU61256.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20535-F11]
+Length=185
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AMC30084.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BOLD:AAN5360]
+Length=186
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOH15590.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AXP93766.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG24416-D10]
+Length=186
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AWU63147.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20494-H06]
+Length=186
+
+ Score = 90.1 bits (222),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AWK36276.1 cytochrome oxidase subunit 1, partial [Parakiefferiella sp. BIOUG21380-G11]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  94   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  140
+
+
+>AOQ38780.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=180
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  100  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  146
+
+
+>AOQ83458.1 cytochrome oxidase subunit 1, partial [Prodiamesa olivacea]
+Length=181
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  110  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  156
+
+
+>AXP22155.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BIOUG23326-E08]
+Length=181
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOA26508.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  105  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  151
+
+
+>ALT99217.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+ ALU07736.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>ALF83705.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+ ALT96269.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:AAP2998]
+ AWN89399.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20512-H03]
+ AWU61752.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20733-D01]
+Length=182
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  113  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  159
+
+
+>AOA20052.1 cytochrome oxidase subunit 1, partial [Orthocladiinae sp. BOLD-2016]
+Length=105
+
+ Score = 87.8 bits (216),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  22   LSSGIAHAGGSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  68
+
+
+>AOQ31965.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  105  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  151
+
+
+>AOQ66640.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=184
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOA20826.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOD34922.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOD36665.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOD37265.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOD37914.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO20768.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=180
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  99   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  145
+
+
+>AOO20874.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ38600.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=175
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOA25065.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOQ85954.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=166
+
+ Score = 89.4 bits (220),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  112  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  158
+
+
+>QBO88711.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG17042-C12]
+Length=176
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AOD36766.1 cytochrome oxidase subunit 1, partial [Paraphaenocladius sp. 
+BOLD-2016]
+Length=105
+
+ Score = 87.8 bits (216),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 46/47 (98%), Positives = 46/47 (98%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAG SVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  20   LSSGIAHAGGSVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  66
+
+
+>AOQ35789.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  105  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  151
+
+
+>AOO20455.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO20573.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO21991.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO23400.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOO23882.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOG72385.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+ AOG72650.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=177
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AWN88609.1 cytochrome oxidase subunit 1, partial [Parochlus kiefferi]
+Length=184
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOG70254.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=184
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  116  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  162
+
+
+>AWU61124.1 cytochrome oxidase subunit 1, partial [Tanypodinae sp. BIOUG20532-A01]
+Length=184
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  113  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  159
+
+
+>AMK88508.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=184
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOH29719.1 cytochrome oxidase subunit 1, partial [Derotanypus alaskensis]
+Length=178
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>AOQ32856.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=185
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  106  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  152
+
+
+>QBO81201.1 cytochrome oxidase subunit 1, partial [Tanypus sp. BIOUG24361-H09]
+Length=185
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOO27263.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+ AOQ38146.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD-2016]
+Length=185
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  109  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  155
+
+
+>AMC18630.1 cytochrome oxidase subunit 1, partial [Chironomidae sp. BOLD:ACL0443]
+Length=179
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  104  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  150
+
+
+>AYI87143.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BIOUG30435-D05]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  98   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  144
+
+
+>AOO27040.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  108  LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  154
+
+
+>AOD35582.1 cytochrome oxidase subunit 1, partial [Orthocladius sp. BOLD-2016]
+Length=174
+
+ Score = 89.7 bits (221),  Expect = 1e-20, Method: Compositional matrix adjust.
+ Identities = 47/47 (100%), Positives = 47/47 (100%), Gaps = 0/47 (0%)
+ Frame = +2
+
+Query  2    LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+            LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL
+Sbjct  96   LSSGIAHAGASVDLAIFSLHLAGISSILGAVNFITTVINMRSNGITL  142
+
+
+
+Lambda      K        H
+   0.318    0.134    0.401 
+
+Gapped
+Lambda      K        H
+   0.267   0.0410    0.140 
+
+Effective search space used: 5792104072326
+
+
+  Database: All non-redundant GenBank CDS translations+PDB+SwissProt+PIR+PRF
+excluding environmental samples from WGS projects
+    Posted date:  Aug 3, 2023 12:42 AM
+  Number of letters in database: 235,353,967,185
+  Number of sequences in database:  599,082,554
+
+
+
+Matrix: BLOSUM62
+Gap Penalties: Existence: 11, Extension: 1
+Neighboring words threshold: 12
+Window for multiple hits: 40

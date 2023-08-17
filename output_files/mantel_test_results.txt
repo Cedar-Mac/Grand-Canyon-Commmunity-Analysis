@@ -1,0 +1,64 @@
+mantel test for: denoised_haplotypes_maxee0_5_alpha_1_2023-07-05
+standardized mantel statistic (r-value):  0.9872426 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_11_2023-07-05
+standardized mantel statistic (r-value):  0.9950915 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_13_2023-07-05
+standardized mantel statistic (r-value):  0.9950915 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_15_2023-07-05
+standardized mantel statistic (r-value):  0.9950915 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_3_2023-07-05
+standardized mantel statistic (r-value):  0.9984201 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_5_2023-07-05
+standardized mantel statistic (r-value):  0.999253 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_7_2023-07-05
+standardized mantel statistic (r-value):  0.9979446 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee0_5_alpha_9_2023-07-05
+standardized mantel statistic (r-value):  0.9951118 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_1_2023-07-05
+standardized mantel statistic (r-value):  0.9877498 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_11_2023-07-05
+standardized mantel statistic (r-value):  0.9957152 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_13_2023-07-05
+standardized mantel statistic (r-value):  0.9957152 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_15_2023-07-05
+standardized mantel statistic (r-value):  0.9957152 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_3_2023-07-05
+standardized mantel statistic (r-value):  0.999112 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_5_2023-07-05
+standardized mantel statistic (r-value):  1 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_7_2023-07-05
+standardized mantel statistic (r-value):  0.9980322 
+p-value:  0.001 
+
+mantel test for: denoised_haplotypes_maxee1_0_alpha_9_2023-07-05
+standardized mantel statistic (r-value):  0.9957152 
+p-value:  0.001 
+
