@@ -37,7 +37,7 @@ Merging the paired reads takes the forward and reverse strands and their quality
 
 Two empty samples (CR_216_1_S45, CR_97_1_S29), and BA_1_S92 didn't merge successfully. 
 BA_1_S92 was missing a sequence at line 22 of the R2 file. I completely removed this sequence from both files.
-```{r}
+```{r merge pairs}
 # vsearch cannot auto pair R1 and R2? So used lapply to iterate over unmerged_file_names df.
 lapply(unmerged_file_names, Merge_PE(file1=first_reads, file2=second_reads, exe= "vsearch"))
 
@@ -53,7 +53,7 @@ fwhF2 and EPTDr2n
 EPTDr2n ended with a Y degenerate base, which IDT was unable to produce. Instead, two primers were created, one ending with C (EPTDr2n_C) and the other ending with T (EPTDr2n_T).
 
 All primers are sets of 4 primers with 0-3 N bases to create frame shifts.
-```{r include=FALSE}
+```{r trim primers, include=FALSE}
 # Import primer sequences (just COI primer sequence, not including universal tail)
 
 primers <- read.csv(here("input_files", "fwhF2_EPTDr2n_primer_sequences.csv"))
@@ -88,7 +88,7 @@ Cutadapt(files = merged_files,
 ## get length distribution of trimmed sequences
 This is a good quality check. Target sequences should be 142 bp plus or minus a few bases for indels.
 
-```{r include=FALSE}
+```{r length distributions, include=FALSE}
 
 dir.create("_Length_distribution", path = "B_Cutadapt/_stats/_Length_distribution")
 
@@ -112,7 +112,7 @@ end_time - start_time
 
 
 ## Discard all sequences that are not an exact match for sequence length (142bp)
-```{r}
+```{r filter lengths}
 #Filter trimmed reads to only match 142 bp
 Cutadapt_files <- list.files("B_Cutadapt/_data", full.names = TRUE)
 Minmax(files = Cutadapt_files,
@@ -124,7 +124,7 @@ JAMP_folder_rename(newname="minmax_haplotypes")
 
 ## Create two folders, one for ee value of 0.5 and one for ee value of 1.0
 At this point we still have fastq files as the output of the Minmax filter. I now create two folders for filtered sequences based on their quality scores. One is filtered at an expected error rate of 0.5 errors per 100 bases, the other at 1 error per 100 bases. 
-```{r}
+```{r ee folders}
 haplotype_minmax_files <- list.files(here(recent_newname, "_data"), full.names = TRUE)
 
 Max_ee(files = haplotype_minmax_files,
@@ -143,7 +143,7 @@ The alpha value determines at what point a similar sequence x is determined to b
 The JAMP Denoise function performs several tasks. First chimera sequences (CO1 genes that appear outside of invertebrate mitochondrial DNA?) are removed. Sequences are then denoised (supposedly erroneous sequences are merged with the correct sequence). and finally sequences are clustered into OTU's.
 
 3 files seem to get duplicated with the duplicates being all zero's. The three files are BA_2_S61_PE.1, CR_226_1_S47_PE.1, and DIA_2_S88_PE.1. Issue resolved, an extra row in the files was the issue.
-```{r}
+```{r denoise methods}
 files_for_denoise_maxee0_5 <- list.files(here("maxee_haplotypes_maxee0_5_2023-07-05", "_data"), full.names = TRUE)
 for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
   Denoise(files = files_for_denoise_maxee0_5,
@@ -167,7 +167,7 @@ for (i in c("1", "3", "5", "7", "9", "11", "13", "15")) {
 ## Create dissimilarity matricies for mantel tests
 For each ee filtering and alpha value denoising, calculate a dissimilarity matrix of sampling sites based on haplotype abundances.
 Using the Cao index to account for potentially high beta diversity, and the unknown relationships between sampling and read counts for aquatic sampling of eDNA. SHOULD PROBABLY USE BINOMIAL METHOD AND CONVERT TO PRESENCE/ABSCENCE?
-```{r}
+```{r disimilarity matrices}
 for (folder in dir(pattern = "^denoised_haplotypes")) {
   #read in haplotype data, dropping metadata columns and the duplicated sites 
   #(2 sites end up duplicated somewhere in the denoising pipeline of JAMP)
@@ -188,7 +188,7 @@ for (folder in dir(pattern = "^denoised_haplotypes")) {
 
 ## Mantel tests
 Compare each dissimilarity matrix to the default settings of ee = 1.0 and unoise_alpha = 5
-```{r}
+```{r mantel tests}
 default_dist_matrix <- read_csv("denoised_haplotypes_maxee1_0_alpha_5_2023-07-05/dist_matrix.csv", 
                                 col_names = FALSE, show_col_types = FALSE) 
 
@@ -210,7 +210,7 @@ for (folder in dir(pattern = "^denoised_haplotypes")) {
 ## Compare number of haplotypes within OTU's between different denoising methods
 Compare how the number of observed OTU's change with each method.
 Use OTU centroid sequences to compare the number of ESV's associated with each sequence according to different denoising methods. 
-```{r}
+```{r OTU haplotypes}
 haplo2OTU <- list.files(path = ".", pattern = ".*_haplo2OTU.csv", recursive = TRUE, full.names = TRUE) %>% grep("_data", ., value = TRUE)
 otu_seqs <- data.frame(method=character(0), sequences=character(0), ESV_count=double(0))
 
@@ -263,7 +263,8 @@ Regardless, from a species conservation standpoint, it appears that an alpha val
 When considering species haplotypes looking at phylogeny and population genetics it may be worth considering a more relaxed alpha value of 8. However, this has the risk of including erroneous sequences.
 
 ## NMS of the number of ESV's per OTU in method space
-```{r}
+WIP 7/23/23 This is not a very quality NMS. Low stress, but that is because of very little variance in the ESV matrix.
+```{r NMS}
 sequence_ESVs_by_method[is.na(sequence_ESVs_by_method)] <- 0
 ESV_MDS_in <- t(sequence_ESVs_by_method)[-1,]
 mode(ESV_MDS_in) <- "numeric"

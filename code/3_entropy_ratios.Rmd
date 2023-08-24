@@ -12,7 +12,7 @@ editor_options:
 # Load packages
 packages <- c('JAMP', 'here', 'tidyverse', 'vegan', 'Biostrings')
 lapply(packages, library, character.only = T)
-source("JAMP_folder_rename.R")
+source("code/JAMP_folder_rename.R")
 ```
 
 ## Compare mean entropy scores
