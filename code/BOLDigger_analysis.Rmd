@@ -1,0 +1,136 @@
+---
+title: "BOLDigger Taxa Analysis"
+output:
+  pdf_document: default
+  html_notebook: default
+editor_options:
+  chunk_output_type: console
+---
+
+## Load packages
+```{r setup, include=FALSE}
+# Load packages
+packages <- c('JAMP', 'here', 'tidyverse', 'vegan', 'Biostrings')
+lapply(packages, library, character.only = T)
+source("code/import_bold_file.R")
+```
+
+Was going to take a sample of sequences from each method, but decided taking random samples from each method would be misleading, and taking the same sample of sequences from each method would be pointless. I've included this below anyway because the code is functional even if the function is meaningless.
+
+## Data Selection (Not being used)
+```{r data selection}
+set.seed(42)
+file_names <- list.files(path = ".", pattern = ".*E_haplo_table.csv", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
+
+# Select the six datasets identified above (see #1)
+select_files <- file_names[c(1, 2, 6, 9, 10, 14)]
+
+# Sample file to choose the select sequences to get taxon data for.
+sample_file <- read_csv("denoised_haplotypes_maxee1_0_alpha_15_2023-07-05/E_haplo_table.csv", show_col_types = FALSE)
+
+# Only keep non-Colorado River samples and remove any empty rows (haplotypes only present in CR)
+tribs_only <- sample_file %>% 
+  select(!starts_with("CR_")) %>% 
+  filter(if_any(everything(4:65), ~ .x != 0)) %>%
+  head(nrow(.)-1)
+
+# Select 200 sequences. This ensures that we will end up with the same haplotypes for each 
+select_sequences <- sample(tribs_only$sequences, 200, replace = FALSE)
+
+for (file in select_files) {
+  haplo_table <- read_csv(file,
+                        col_names = TRUE, 
+                        show_col_types = FALSE)
+
+# 
+haplo_subset <- haplo_table %>% 
+  filter(sequences %in% select_sequences) %>% 
+  unite(haplo_name, OTU, haplotype, sep = "_", remove = TRUE)
+
+# Create fasta file using the haplo_name as the name of each sequence.
+write.fasta(sequences = as.list(haplo_subset$sequences), 
+            names = haplo_subset$haplo_name, 
+            file.out = paste("boldigger_input/boldigger_subsample_", substr(file, 23, nchar(file)-44), ".txt"))
+}
+```
+
+## Data Joining
+
+BOLDigger output is from the OTU centroids of maxee0_5_alpha_15. The taxa will be matched back with their sequences so we can compare which taxa may be missing or having varying haplotype representation within OTU's. I used the first-hit for best match, but I believe the JAMP pipeline method would result in better quality, more useable output.
+
+```{r data joining}
+# Read in the taxa info from BOLDigger
+BOLDresults <- "output_files/boldigger_output/BOLDResults_ee0_5_alpha_15_haplo_OTU_Centroids_part_1.xlsx"
+best_matches_only <- import_bold_file(BOLDresults)
+
+# Read in the sequences for OTU centroids
+haplo_file <- "denoised_haplotypes_maxee0_5_alpha_15_2023-07-05/_data/4_denoised/ee0_5_alpha_15_haplo_OTU_Centroids.txt"
+haplo_table <- seqParser::read.myfasta(haplo_file) %>% dplyr::rename(OTU = desc)
+
+# Join the taxa list with the haplo_table so we have taxa information connected with sequences.
+taxa_table <- left_join(haplo_table, best_matches_only, by = join_by(OTU))
+
+# Select only taxon information and sequences. Drop any sequences with unknown phylum or class.
+taxa_sequences <- taxa_table %>%
+                    select(OTU, seq, Phylum, Class, Order, Family, Genus, Species, Similarity) %>%
+                    filter(if_all(c(Phylum, Class), ~ !is.na(.))) %>% 
+                    distinct()
+
+```
+
+
+## Identify Sequences Not Appearing in ee0_5_alpha15
+
+Current taxa list is only from the OTU centroids of one site. To figure out what OTU's are missing at other sites we will filter the haplo_OTU_Centroids.csv files for each method.
+
+```{r identify unknown sequences}
+# haplo_centroids
+file_names <- list.files(path = ".", pattern = ".*haplo_OTU_Centroids.txt", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
+
+unknown_sequences <- vector("list", length = length(file_names))
+
+for (i in 1:length(file_names)) {
+  otu_sequences <- seqParser::read.myfasta(file_names[i]) %>% dplyr::rename(OTU = desc)
+  otu_sequences %>% filter((!seq %in% as.vector(taxa_sequences$seq)))
+  unknown_sequences[[i]] <- otu_sequences
+} 
+
+all_unknowns = do.call(rbind, unknown_sequences) %>% distinct(seq, .keep_all = TRUE)
+
+write.fasta(sequences = as.list(all_unknowns$seq), 
+            names = all_unknowns$OTU, 
+            file.out = paste("unknown_sequences.txt"))
+```
+
+
+## Compare OTU centroid Taxa across methods
+WIP 8/24/23
+Get the complete list of OTU centroid taxa. This will be used in the next blocks.
+```{r combine all centroids}
+BOLD_file <- "output_files/boldigger_output/BOLDresults_unknown_sequences_part_1.xlsx"
+new_taxa <- import_bold_file(BOLD_file)
+
+# May need to drop duplicate OTU numbers (even though they may be distinct taxa from separate methods) in order to join dataframes.
+# unique_unknown <- all_unknowns %>% distinct(OTU, .keep_all = TRUE)
+# unique_new_taxa <- new_taxa %>% distinct(OTU, .keep_all = TRUE)
+
+new_known_sequences <- left_join(all_unknowns, new_taxa, by = join_by(OTU)) %>% 
+  distinct(OTU, .keep_all = TRUE)
+
+all_taxa_sequences <- rbind(new_known_sequences, taxa_sequences)
+```
+
+
+Calculate the number of haplotypes per taxon for each method. 
+```{r haplotypes per taxon}
+
+
+```
+
+
+determine species list unique to only less strict denoising and filtering.
+```{r species differences}
+
+```

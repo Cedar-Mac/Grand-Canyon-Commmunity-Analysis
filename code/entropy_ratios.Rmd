@@ -34,8 +34,8 @@ A few different ideas here:
       Something to do with the entropy scores of individual sequences. 
       Maybe flag method if any individual sequence has an outrageous entropy score.
       Maybe develop a filter for haplotype sequences based on the entropy score.
-```{r}
-# Going with option 3, entropy ratio.
+```{r taxreturn entropy}
+# Going with option 3, entropy ratio. Taxreturn method.
 haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
 
@@ -82,8 +82,8 @@ Additionally one sequence is always being reverse complimented, this is probably
 Current ratio is greater than 1 which would mean that position 3 has a lower entropy value/is more predictable. That goes against standard pattern of codon entropy. Potentially this is an issue with alignment and the codon_entropy function. Alternatively, since the entropy is empirical and based on observed counts in the sequences, it may be that the CO1 gene sequence being used is too short (142 bp). This could throw off base counts at each codon position. I believe the alignment issue could be very likely because the entropy value for position 1 would fit for position 3, and the entropy value of position 3 would fit with what we know about position 2 being highly conserved. I will test for this with multiple sequence alignment to a reference CO1 gene.
 
 ## Verify entropy scores myself
-I ran a Blastx search on a random sequence. It appears a +2 shift in the reading frame is necessary to align with protein synthesis, therefore the first base in our sequences are actually the 3rd. I'm not sure if the taxreturn::codon_entropy function is taking that into account. If it is not taking the shift into account then the output is actually much closer to what is expected. We will verify here.
-```{r}
+I ran a Blastx search on a random sequence. It appears a +2 shift in the reading frame is necessary to align with protein synthesis, therefore the first base in our sequences are actually the 3rd. I'm not sure if the taxreturn::codon_entropy function is taking that into account. If it is not taking the shift into account then the output is actually much closer to what is expected. We will verify here. Between sequence base entropy.
+```{r between-sequence entropy}
 haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
 
@@ -135,7 +135,7 @@ my_entropy_ratios %>%
 
 There seems to be an issue where the codon_entropy is calculating the entropy within a sequence, i.e. counting all the occurrences of 'A' at position 1 of each codon. Above, I calculated the entropy at each position in the sequence by comparing haplotype sequences. I'll try it the AlexPiper method below.
 
-```{r}
+```{r within-sequence entropy}
 haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
 
