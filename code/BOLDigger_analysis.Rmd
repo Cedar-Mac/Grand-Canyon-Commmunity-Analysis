@@ -13,6 +13,7 @@ editor_options:
 packages <- c('JAMP', 'here', 'tidyverse', 'vegan', 'Biostrings')
 lapply(packages, library, character.only = T)
 source("code/import_bold_file.R")
+source("code/assign_taxon_names.R")
 ```
 
 Was going to take a sample of sequences from each method, but decided taking random samples from each method would be misleading, and taking the same sample of sequences from each method would be pointless. I've included this below anyway because the code is functional even if the function is meaningless.
@@ -120,17 +121,44 @@ new_known_sequences <- left_join(all_unknowns, new_taxa, by = join_by(OTU)) %>%
   distinct(OTU, .keep_all = TRUE)
 
 all_taxa_sequences <- rbind(new_known_sequences, taxa_sequences)
+write_csv(all_taxa_sequences, "all_taxa_sequences.csv")
 ```
 
 
 Calculate the number of haplotypes per taxon for each method. 
 ```{r haplotypes per taxon}
+file_names <- list.files(path = ".", pattern = ".*E_haplo_table.csv", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
 
+for (file in file_names) {
+    haplotype_taxonomy <- assign_taxon_names(file)
+  
+  order_haplotypes <- haplotype_taxonomy %>% aggregate(by = file$Order, FUN = NROW)
+  
+  order_haplotypes %>% 
+  ggplot((aes(x=Order, y=x))) +
+    geom_bar() +
+    scale_color_discrete() +
+    ggtitle(paste(file, "Order Haplotypes")) +
+    ylab("Number of Haplotypes")
+}
 
 ```
 
 
 determine species list unique to only less strict denoising and filtering.
 ```{r species differences}
+file_names <- list.files(path = ".", pattern = ".*E_haplo_table.csv", recursive = TRUE, full.names = TRUE) %>% 
+  grep("_data", ., value = TRUE)
+
+most_strict <- file_names[[1]]
+least_strict <- file_names[[12]]
+
+most_strict_haplo_taxa <- assign_taxon_names(most_strict)
+least_strict_haplo_taxa <- assign_taxon_names(least_strict)
+
+
 
 ```
+
+
