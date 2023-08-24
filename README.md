@@ -1,6 +1,6 @@
 # Grand-Canyon-Commmunity-Analysis
 
-<p>This would more accurately be call the analysis of the methods for Jared Freedman's thesis on macroinvertebrate communities along the mainstem Colorado river and its tributaries. </p>
+<p>This would more accurately be call the analysis of the methods for a study on macroinvertebrate communities along the mainstem Colorado river and its tributaries. </p>
 
 <p>The main question addressed in this project is whether different filtering thresholds (filter at expected error of 0.05 and 0.1) or the strictness of the alpha value denoising parameter (cluster_unoise, unoise3 algorithm) changes the number of observed taxanomic units (OTU's) or exact sequence variants (ESV's). Exact sequence variants are individual haplotypes that Jared is using for dispersion and population analysis along the Colorado River. </p>
 
