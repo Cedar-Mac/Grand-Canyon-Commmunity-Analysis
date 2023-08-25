@@ -9,7 +9,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-## Load packages
 ```{r setup, include=FALSE}
 # Load packages
 packages <- c('tidyverse', 'Biostrings')
@@ -75,7 +74,7 @@ BOLDresults <- "output_files/boldigger_output/BOLDResults_ee0_5_alpha_15_haplo_O
 best_matches_only <- import_bold_file(BOLDresults)
 
 # Read in the sequences for OTU centroids
-haplo_file <- "denoised_haplotypes_maxee0_5_alpha_15_2023-07-05/_data/4_denoised/ee0_5_alpha_15_haplo_OTU_Centroids.txt"
+haplo_file <- "denoised_haplotypes_maxee0_5_alpha_15_2023-08-25/_data/4_denoised/E_haplo_OTU_Centroids.txt"
 haplo_table <- seqParser::read.myfasta(haplo_file) %>% dplyr::rename(OTU = desc)
 
 # Join the taxa list with the haplo_table so we have taxa information connected with sequences.
@@ -117,7 +116,7 @@ for (i in 1:length(file_names)) {
 all_unknowns = do.call(rbind, unknown_sequences) %>% 
   distinct(seq, .keep_all = TRUE)
 
-write.fasta(sequences = as.list(all_unknowns$seq), 
+seqinr::write.fasta(sequences = as.list(all_unknowns$seq), 
             names = all_unknowns$OTU, 
             file.out = paste("unknown_sequences.txt"))
 ```

@@ -1,36 +1,48 @@
 ---
 title: "Denoising Method Analysis"
 output:
-  pdf_document: default
+  html_document:
+    df_print: paged
   html_notebook: default
+  pdf_document: default
 editor_options:
   chunk_output_type: console
 ---
 
-## Load packages and folder_rename function
-```{r include=FALSE}
+```{r setup, include=FALSE}
 # Load packages
-packages <- c('JAMP', 'here', 'tidyverse', 'vegan', 'Biostrings')
+packages <- c('tidyverse', 'vegan')
 lapply(packages, library, character.only = T)
-source("code/JAMP_folder_rename.R")
+source("code/parse_alpha_maxee.R")
 ```
 
 
 ## Create dissimilarity matricies for mantel tests
+
 For each ee filtering and alpha value denoising, calculate a dissimilarity matrix of sampling sites based on haplotype abundances.
-Using the Cao index to account for potentially high beta diversity, and the unknown relationships between sampling and read counts for aquatic sampling of eDNA. SHOULD PROBABLY USE BINOMIAL METHOD AND CONVERT TO PRESENCE/ABSCENCE?
-```{r}
+~~Using the Cao index to account for potentially high beta diversity, and the unknown relationships between sampling and read counts for aquatic sampling of eDNA.~~ USING BINOMIAL METHOD AND CONVERTED TO PRESENCE/ABSCENCE
+
+```{r dissimilarity matricies}
 for (folder in dir(pattern = "^denoised_haplotypes")) {
   #read in haplotype data, dropping metadata columns and the duplicated sites 
   #(2 sites end up duplicated somewhere in the denoising pipeline of JAMP)
-  haplo_table <- paste0(folder, "/E_haplo_table.csv") %>% read_csv(col_names = TRUE, show_col_types = FALSE, 
-    col_select = -c("sort", "haplotype", "OTU", "sequences", "CR_216_2_S46_PE.1", "DIA_1_S79_PE.1")) 
+  haplo_table <- paste0(folder, "/E_haplo_table.csv") %>% 
+    read_csv(
+      col_names = TRUE, 
+      show_col_types = FALSE, 
+      col_select = -c("sort", "haplotype", "OTU", "sequences", "CR_216_2_S46_PE.1", "DIA_1_S79_PE.1")) 
   
-  haplo_table <- haplo_table[1:nrow(haplo_table) - 1,] #remove last row (site totals)
+  #remove last row (site totals)
+  haplo_table <- haplo_table[1:nrow(haplo_table) - 1,] 
   
-  haplo_table <- t(haplo_table) #transpose the distance matrix so haplotypes are columns and sites are rows.
+  #transpose the distance matrix so haplotypes are columns and sites are rows.
+  haplo_table <- haplo_table %>% t()
   
-  vegdist(haplo_table, method = "cao", binary = FALSE) %>% #dissimilarity matrix using Cao index.
+  # convert to presence absence
+  haplo_table[haplo_table > 1] <- 1
+  
+  #dissimilarity matrix using binomial method (input must be presence/absence).
+  vegdist(haplo_table, method = "binomial", binary = FALSE) %>% 
     as.matrix() %>% as.data.frame() %>% 
       #write to file named dist_matrix.csv in appropriate folder.
       write_csv(file = paste0(folder, "/dist_matrix.csv"),col_names = FALSE) 
@@ -39,73 +51,105 @@ for (folder in dir(pattern = "^denoised_haplotypes")) {
 
 
 ## Mantel tests
-Compare each dissimilarity matrix to the default settings of ee = 1.0 and unoise_alpha = 5
-```{r}
-default_dist_matrix <- read_csv("./denoised_haplotypes_maxee1_0_alpha_5_2023-07-05/dist_matrix.csv", 
+
+Compare each dissimilarity matrix to the default settings of ee = 0.5 and unoise_alpha = 5
+
+```{r mantel tests}
+default_dist_matrix <- read_csv("./denoised_haplotypes_maxee0_5_alpha_5_2023-08-25/dist_matrix.csv", 
                                 col_names = FALSE, show_col_types = FALSE) 
 
 for (folder in dir(pattern = "^denoised_haplotypes")) {
-  dist_matrix <- paste0(folder, "/dist_matrix.csv") %>% read_csv(col_names = FALSE, show_col_types = FALSE) 
+  dist_matrix <- paste0(folder, "/dist_matrix.csv") %>% 
+    read_csv(col_names = FALSE, show_col_types = FALSE) 
   
-  cat(paste0("mantel test for: ", folder, "\n"), file = "mantel_test_results.txt", append = TRUE)
+  cat(paste0("mantel test for: ", folder, "\n"), 
+      file = "mantel_test_results.txt", append = TRUE)
   
   mantel_result <- mantel(as.dist(default_dist_matrix), as.dist(dist_matrix), 
                           method = "pearson", permutations = 999)
   
   #save results for each comparison to file
-  cat("standardized mantel statistic (r-value): ", mantel_result$statistic, "\np-value: ", mantel_result$signif, "\n\n", 
-      file = "mantel_test_results.txt", append = TRUE) 
+  cat("standardized mantel statistic (r-value): ", mantel_result$statistic, 
+      "\np-value: ", mantel_result$signif, "\n\n", 
+      file = "output_files/mantel_test_results.txt", append = TRUE) 
 }
 ```
 
 
 ## Compare number of haplotypes within OTU's between different denoising methods
+
 Compare how the number of observed OTU's change with each method.
 Use OTU centroid sequences to compare the number of ESV's associated with each sequence according to different denoising methods. 
-```{r}
-haplo2OTU <- list.files(path = "..", pattern = ".*_haplo2OTU.csv", recursive = TRUE, full.names = TRUE) %>% grep("_data", ., value = TRUE)
-otu_seqs <- data.frame(method=character(0), sequences=character(0), ESV_count=double(0))
+
+```{r OTU summary table}
+haplo2OTU <- list.files(
+  pattern = ".*_haplo2OTU.csv", 
+  recursive = TRUE, 
+  full.names = TRUE) %>% 
+    grep("_data", ., value = TRUE)
+
+OTU_seqs <- data.frame(method = character(0), 
+                       sequences = character(0), 
+                       ESV_count = double(0))
 
 for (file in haplo2OTU) {
-  file_data <- read_csv(file, col_select = c("ESV_count", "sequences"), show_col_types = FALSE)
-  file_data$method <- substr(file, 23, nchar(file)-44)
-  otu_seqs <- bind_rows(otu_seqs, file_data)
+  
+  file_data <- read_csv(file, 
+                        col_select = c("ESV_count", "sequences"), 
+                        show_col_types = FALSE)
+  
+  file_data$method <- substring(
+    text = file, 
+    first = nchar("../denoised_haplotypes_"), 
+    last = nchar(file) - nchar("_2023-08-25/_data/4_denoised/E_haplo2OTU.csv"))
+  
+  OTU_seqs <- bind_rows(OTU_seqs, file_data)
 }
 
-# number of OTU's based on each filtering method. 
-# As expected the strictest filtering has the fewest OTU's (but the difference is small ~30 OTU's)
-OTU_count_by_method <- aggregate(otu_seqs$sequences, by = list(Method=otu_seqs$method), FUN = NROW)
-OTU_count_by_method$maxee <- parse_number(unlist(strsplit(OTU_count_by_method$Method, "alpha")))[seq(1, 32, 2)] #create new column with maxee
-OTU_count_by_method[OTU_count_by_method == 0] <- 0.5
-OTU_count_by_method$alpha <- parse_number(unlist(strsplit(OTU_count_by_method$Method, "alpha")))[seq(2, 32, 2)] #create new column with alpha
-# Plot results
-OTU_count_by_method %>% 
-  ggplot((aes(x=alpha, y=x, group=factor(maxee), color=factor(maxee)))) +
+OTU_seqs <- parse_alpha_maxee(OTU_seqs)
+
+
+```
+
+## OTU Graph
+
+```{r OTU graph}
+# Plot number of OTU's for each method
+OTU_seqs %>% group_by(alpha, maxee) %>% summarise(count = n()) %>% 
+  ggplot((aes(x = alpha, y = count, group = maxee, color = maxee))) +
     geom_line() +
     scale_color_discrete() +
     ggtitle("Number of OTU's based on denoising parameters") +
     ylab("Number of OTU's")
+ggsave(filename = "output_files/OTU_graph.png", 
+       device = "png")
+```
 
-# number of ESV's based on each filtering method. Nearly 450 more OTU's in the least strict method vs. most strict.
-ESV_count_by_method <- aggregate(otu_seqs$ESV_count, by = list(Method=otu_seqs$method), FUN = sum)
-ESV_count_by_method$maxee <- parse_number(unlist(strsplit(ESV_count_by_method$Method, "alpha")))[seq(1, 32, 2)] #create new column with maxee
-ESV_count_by_method[ESV_count_by_method == 0] <- 0.5
-ESV_count_by_method$alpha <- parse_number(unlist(strsplit(ESV_count_by_method$Method, "alpha")))[seq(2, 32, 2)] #create new column with alpha
+## ESV Graph
 
-# Plot results
-ESV_count_by_method %>% 
-  ggplot((aes(x=alpha, y=x, group=factor(maxee), color=factor(maxee)))) +
+``` {r ESV Graph}
+# Plot number of ESV's for each method
+OTU_seqs %>% group_by(alpha, maxee) %>% summarise(ESV_count = sum(ESV_count)) %>%
+  ggplot((aes(x = alpha, y = ESV_count, group = maxee, color = maxee))) +
     geom_line() +
     scale_color_discrete() +
     ggtitle("Number of ESV's based on denoising parameters") +
     ylab("Number of ESV's")
-  
-# Compare number of ESV's per OTU centroid for each method. 
-# Each column is a method. Each row is a centroid sequence. each value is the number of ESV's associated with each centroid.
-sequence_ESVs_by_method <- spread(otu_seqs, key = "method", value = "ESV_count")
+ggsave(filename = "output_files/ESV_graph.png",
+       device = "png")
+```
 
-#These are centroid sequences where at least one method had a different number of ESV's than the rest.
-ESV_method_differences <- filter_at(sequence_ESVs_by_method, vars(starts_with("pes_maxee")), any_vars(. != pes_maxee0_5_alpha_1))
+# ESV Table
+
+``` {r ESV table}
+# Compare number of ESV's per OTU centroid for each method. 
+sequence_ESVs_by_method <- OTU_seqs %>% 
+  spread(key = "method", value = "ESV_count", fill = 0) %>% 
+  select(-c(maxee, alpha))
+
+# Centroid sequences where at least one method had a different number of ESV's
+ESV_method_differences <- sequence_ESVs_by_method %>% 
+  filter_at(vars(starts_with("maxee")), any_vars(. != maxee0_5_alpha_1))
 ```
 As expected the number of OTU's and the number of ESV's increases as the alpha value is relaxed. The line for ee=0.5 remains lower than the less strict filtering of ee=1.0. 
 The number of observed OTU's flattens out quickly as the alpha value increases becoming flat after an alpha of 4. 
@@ -114,21 +158,21 @@ This suggests there may be some rare ESV's that are being discarded at lower alp
 Regardless, from a species conservation standpoint, it appears that an alpha value of 3 is perfectly acceptable, and relaxing the alpha value will not significantly increase the number of OTU's observed.
 When considering species haplotypes looking at phylogeny and population genetics it may be worth considering a more relaxed alpha value of 8. However, this has the risk of including erroneous sequences.
 
-## NMS of the number of ESV's per OTU in method space
-```{r}
-sequence_ESVs_by_method[is.na(sequence_ESVs_by_method)] <- 0
+## NMS of the methods in ESV space
+```{r NMS, results=FALSE}
+# species matrix, columns are haplotypes
 ESV_MDS_in <- t(sequence_ESVs_by_method)[-1,]
 mode(ESV_MDS_in) <- "numeric"
 
 ESV_MDS_out <- metaMDS(ESV_MDS_in, autotransform = FALSE,
           distance = "bray",
-          k = 3,
+          k = 2,
           maxit = 999, 
           trymax = 500,
           wascores = TRUE)
+
 stressplot(ESV_MDS_out)
 plot(ESV_MDS_out, "sites")
 orditorp(ESV_MDS_out, "sites")
 ```
-
 

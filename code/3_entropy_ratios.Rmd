@@ -1,21 +1,23 @@
 ---
 title: "entropy_ratios"
 output:
-  pdf_document: default
+  html_document:
+    df_print: paged
   html_notebook: default
+  pdf_document: default
 editor_options:
   chunk_output_type: console
 ---
 
-## Load packages and folder_rename function
-```{r include=FALSE}
+```{r load packages, include=FALSE}
 # Load packages
-packages <- c('JAMP', 'here', 'tidyverse', 'vegan', 'Biostrings')
+packages <- c('tidyverse', 'Biostrings')
 lapply(packages, library, character.only = T)
-source("code/JAMP_folder_rename.R")
+source("code/parse_alpha_maxee.R")
 ```
 
 ## Compare mean entropy scores
+
 A few different ideas here:
   1. Corrected entropy score a la Antich:
       for each method calculate the mean entropy for each codon position in a sequence ->
@@ -34,29 +36,54 @@ A few different ideas here:
       Something to do with the entropy scores of individual sequences. 
       Maybe flag method if any individual sequence has an outrageous entropy score.
       Maybe develop a filter for haplotype sequences based on the entropy score.
+      
 ```{r taxreturn entropy}
 # Going with option 3, entropy ratio. Taxreturn method.
-haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
+haplo_seqs <- list.files(path = ".", 
+                         pattern = ".*_haplo_sequ_by_OTU.txt", 
+                         recursive = TRUE, 
+                         full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
 
-entropy_ratio_by_method <- data.frame(method=character(0), entropy_ratio=double(0))
+entropy_ratio_by_method <- data.frame(method = character(0), 
+                                      entropy_ratio = double(0))
 
 start_time <- Sys.time()
 
 for (file in haplo_seqs) {
-  haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
-  entropy_scores <- taxreturn::codon_entropy(haplo_seq_StringSet, genetic_code = "SGC4", codon_filter = TRUE, method = "ML")
-    #method "ML" is the maximum likelihood. Calculates Shannon Entropy (H) using frequencies of bases.
-    #maximum entropy is 1.3863 nats (ln) for a completely random distribution of base frequency (expected for pos3).
-    #genetic code "SGC4" is the invertebrate mitochondrial reference genome.
-  pos1_mean_entropy <- lapply(1:length(entropy_scores), function(x) entropy_scores[[x]][[1]]) %>% unlist() %>% mean()
-  pos2_info <- log(4) - pos1_mean_entropy
-  pos2_mean_entropy <- lapply(1:length(entropy_scores), function(x) entropy_scores[[x]][[2]]) %>% unlist() %>% mean()
-  pos2_info <- log(4) - pos2_mean_entropy
-  pos3_mean_entropy <- lapply(1:length(entropy_scores), function(x) entropy_scores[[x]][[3]]) %>% unlist() %>% mean()
-  pos3_info <- log(4) - pos3_mean_entropy
+  
+  haplo_seq_StringSet <- readDNAStringSet(file, 
+                                          format = "fasta", 
+                                          use.names = TRUE)
+  # method "ML" is the maximum likelihood. Calculates Shannon Entropy (H) 
+  # maximum entropy is 1.3863 nats (ln) for a completely random distribution.
+  # genetic code "SGC4" is the invertebrate mitochondrial reference genome.
+  entropy_scores <- taxreturn::codon_entropy(haplo_seq_StringSet, 
+                                             genetic_code = "SGC4", 
+                                             codon_filter = TRUE, 
+                                             method = "ML")
+
+  pos1_mean_entropy <- lapply(1:length(entropy_scores), 
+                              function(x) entropy_scores[[x]][[1]]) %>% 
+    unlist() %>% 
+    mean()
+  
+  pos2_mean_entropy <- lapply(1:length(entropy_scores), 
+                              function(x) entropy_scores[[x]][[2]]) %>% 
+    unlist() %>% 
+    mean()
+  
+  pos3_mean_entropy <- lapply(1:length(entropy_scores), 
+                              function(x) entropy_scores[[x]][[3]]) %>% 
+    unlist() %>% 
+    mean()
+  
+  # correction for reading frame. Base 1 is shifted +2. pos3 = pos2, pos1 = pos3
   entropy_ratio <- pos3_mean_entropy / pos1_mean_entropy
-  entropy_ratio_by_method <- add_row(entropy_ratio_by_method, method = substr(file, 23, nchar(file) - 52), entropy_ratio = entropy_ratio)
+  
+  entropy_ratio_by_method <- add_row(entropy_ratio_by_method, 
+                                     method = substr(file, 23, nchar(file) - 52), 
+                                     entropy_ratio = entropy_ratio)
 }
 
 end_time <- Sys.time() # end timer once for loop is completed
@@ -64,13 +91,11 @@ end_time <- Sys.time() # end timer once for loop is completed
 end_time - start_time
 
 # Add column for maxee and alpha value
-entropy_ratio_by_method$maxee <- parse_number(unlist(strsplit(entropy_ratio_by_method$method, "alpha")))[seq(1, 32, 2)] 
-entropy_ratio_by_method$maxee[entropy_ratio_by_method$maxee == 0] <- 0.5
-entropy_ratio_by_method$alpha <- parse_number(unlist(strsplit(entropy_ratio_by_method$method, "alpha")))[seq(2, 32, 2)] 
+entropy_ratio_by_method <- parse_alpha_maxee(entropy_ratio_by_method)
 
 # Graph entropy ratio vs. alpha value for each ee.
 entropy_ratio_by_method %>% 
-  ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
+  ggplot((aes(x = alpha, y = entropy_ratio, group = maxee, color = maxee))) +
     geom_line() +
     scale_color_discrete() +
     ggtitle("Codon Entropy Ratio from Taxreturn (corrected)") +
@@ -82,51 +107,69 @@ Additionally one sequence is always being reverse complimented, this is probably
 Current ratio is greater than 1 which would mean that position 3 has a lower entropy value/is more predictable. That goes against standard pattern of codon entropy. Potentially this is an issue with alignment and the codon_entropy function. Alternatively, since the entropy is empirical and based on observed counts in the sequences, it may be that the CO1 gene sequence being used is too short (142 bp). This could throw off base counts at each codon position. I believe the alignment issue could be very likely because the entropy value for position 1 would fit for position 3, and the entropy value of position 3 would fit with what we know about position 2 being highly conserved. I will test for this with multiple sequence alignment to a reference CO1 gene.
 
 ## Verify entropy scores myself
+
 I ran a Blastx search on a random sequence. It appears a +2 shift in the reading frame is necessary to align with protein synthesis, therefore the first base in our sequences are actually the 3rd. I'm not sure if the taxreturn::codon_entropy function is taking that into account. If it is not taking the shift into account then the output is actually much closer to what is expected. We will verify here. Between sequence base entropy.
+
 ```{r between-sequence entropy}
-haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
+
+haplo_seqs <- list.files(path = ".", 
+                         pattern = ".*_haplo_sequ_by_OTU.txt", 
+                         recursive = TRUE, full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
 
-my_entropy_ratios <- data.frame(method=character(0), entropy_ratio=double(0))
+my_entropy_ratios <- data.frame(method = character(0), 
+                                entropy_ratio = double(0))
 
 for (file in haplo_seqs) {
   # read in file
-  haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
+  haplo_seq_StringSet <- readDNAStringSet(file, 
+                                          format = "fasta", 
+                                          use.names = TRUE)
  
-   # create probability table of each base at each position.
-  position_probability_matrix <- consensusMatrix(haplo_seq_StringSet, as.prob = TRUE, shift = 2, baseOnly = TRUE)
+  # create probability table of each base at each position. 
+  # Shift to reading frame
+  position_probability_matrix <- consensusMatrix(haplo_seq_StringSet, 
+                                                 as.prob = TRUE, 
+                                                 shift = 2, 
+                                                 baseOnly = TRUE)
   
-  # motif logo of the consensus matrix.
+  # motif logo of the consensus matrix, for fun.
   ggseqlogo::ggseqlogo(position_probability_matrix)
  
-   # calculate entropy at each position using Shannon entropy formula with natural logarithm (to match the nats unit above)
-  position_entropy_vector <- apply(position_probability_matrix, 2, function(prob) -sum(prob * log(prob), na.rm = TRUE))
+  # calculate entropy at each position using Shannon entropy formula
+  position_entropy_vector <- apply(X = position_probability_matrix, 
+                                   MARGIN = 2, 
+                                   FUN = function(prob) -sum(prob * log(prob), 
+                                                             na.rm = TRUE))
  
-   # reshape so there are three columns, one for each codon position. Fill the first two zero's as NA and rename columns.
-  codon_position_entropy_matrix <- matrix(position_entropy_vector, ncol = 3, byrow = TRUE)
-  codon_position_entropy_matrix[codon_position_entropy_matrix==0] <- NA
-  colnames(codon_position_entropy_matrix) <- c("pos_1", "pos_2", "pos_3")
+  # reshape so there are three columns, one for each codon position. 
+  # Fill the first two zero's as NA and rename columns.
+  codon_position_entropy_matrix <- matrix(position_entropy_vector, 
+                                          ncol = 3, 
+                                          byrow = TRUE)
+  
+  codon_position_entropy_matrix[codon_position_entropy_matrix == 0] <- NA
   
   # calculate mean entropy of each codon position.
-  pos_1_mean <- colMeans(codon_position_entropy_matrix, na.rm = TRUE)[1]
-  pos_2_mean <- colMeans(codon_position_entropy_matrix, na.rm = TRUE)[2]
-  pos_3_mean <- colMeans(codon_position_entropy_matrix, na.rm = TRUE)[3]
+  pos_1_mean <- mean(codon_position_entropy_matrix[, 1], na.rm = TRUE)
+  pos_2_mean <- mean(codon_position_entropy_matrix[, 2], na.rm = TRUE)
+  pos_3_mean <- mean(codon_position_entropy_matrix[, 3], na.rm = TRUE)
   
-  # ratio of most conserved position (position 2) and the most variable position (position 3)
+  # ratio of most conserved position (position 2) to most variable position (position 3)
   ratio <- pos_2_mean / pos_3_mean
   
   # add the method results to the data frame and repeat.
-  my_entropy_ratios <- add_row(my_entropy_ratios, method = substr(file, 23, nchar(file) - 52), entropy_ratio = ratio)
+  my_entropy_ratios <- add_row(my_entropy_ratios, 
+                               method = substr(file, 23, nchar(file) - 52), 
+                               entropy_ratio = ratio)
 }
 
 # Add column for maxee and alpha value
-my_entropy_ratios$maxee <- parse_number(unlist(strsplit(my_entropy_ratios$method, "alpha")))[seq(1, 32, 2)] 
-my_entropy_ratios$maxee[my_entropy_ratios$maxee == 0] <- 0.5
-my_entropy_ratios$alpha <- parse_number(unlist(strsplit(my_entropy_ratios$method, "alpha")))[seq(2, 32, 2)] 
+my_entropy_ratios <- parse_alpha_maxee(my_entropy_ratios)
 
 # Graph entropy ratio vs. alpha value for each ee.
 my_entropy_ratios %>% 
-  ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
+  ggplot((aes(x = alpha, y = entropy_ratio, group = maxee, color = maxee))) +
     geom_line() +
     scale_color_discrete() +
     ggtitle("Codon Entropy Ratio Comparing Between Sequences") +
@@ -136,17 +179,27 @@ my_entropy_ratios %>%
 There seems to be an issue where the codon_entropy is calculating the entropy within a sequence, i.e. counting all the occurrences of 'A' at position 1 of each codon. Above, I calculated the entropy at each position in the sequence by comparing haplotype sequences. I'll try it the AlexPiper method below.
 
 ```{r within-sequence entropy}
-haplo_seqs <- list.files(path = ".", pattern = ".*_haplo_sequ_by_OTU.txt", recursive = TRUE, full.names = TRUE) %>% 
+haplo_seqs <- list.files(path = ".", 
+                         pattern = ".*_haplo_sequ_by_OTU.txt", 
+                         recursive = TRUE, 
+                         full.names = TRUE) %>% 
   grep("_data", ., value = TRUE)
 
-codon_entropy_table <- data.frame(pos1=double(0), pos2=double(0), pos3=double(0))
-codon_entropy_ratios <- data.frame(method=character(0), entropy_ratio=double(0))
+codon_entropy_table <- data.frame(pos1 = double(0), 
+                                  pos2 = double(0), 
+                                  pos3 = double(0))
+
+codon_entropy_ratios <- data.frame(method = character(0), 
+                                   entropy_ratio = double(0))
 
 start_time <- Sys.time()
 
 for (file in haplo_seqs) {
+  
   # read in file
-  haplo_seq_StringSet <- readDNAStringSet(file, format = "fasta", use.names = TRUE)
+  haplo_seq_StringSet <- readDNAStringSet(file, 
+                                          format = "fasta", 
+                                          use.names = TRUE)
   
   
   for (sequence in seq_along(haplo_seq_StringSet)) {
@@ -195,13 +248,11 @@ end_time <- Sys.time() # end timer once for loop is completed
 end_time - start_time
 
 # Add column for maxee and alpha value
-codon_entropy_ratios$maxee <- parse_number(unlist(strsplit(codon_entropy_ratios$method, "alpha")))[seq(1, 32, 2)] 
-codon_entropy_ratios$maxee[codon_entropy_ratios$maxee == 0] <- 0.5
-codon_entropy_ratios$alpha <- parse_number(unlist(strsplit(codon_entropy_ratios$method, "alpha")))[seq(2, 32, 2)] 
+codon_entropy_ratios <- parse_alpha_maxee(codon_entropy_ratios)
 
 # Graph entropy ratio vs. alpha value for each ee.
 codon_entropy_ratios %>% 
-  ggplot((aes(x=alpha, y=entropy_ratio, group=factor(maxee), color=factor(maxee)))) +
+  ggplot((aes(x = alpha, y = entropy_ratio, group = maxee, color = maxee))) +
     geom_line() +
     scale_color_discrete() +
     ggtitle("Codon Entropy Ratio Comparing Within Sequence") +
